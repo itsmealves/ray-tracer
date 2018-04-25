@@ -1,0 +1,45 @@
+//
+// Created by gabriel on 24/04/18.
+//
+
+#include "Sphere.h"
+
+Sphere::Sphere(const arma::vec &color, const arma::vec &center, double r) : Thing(color) {
+    _center = center;
+    _r = r;
+}
+
+arma::vec Sphere::normalTo(const arma::vec &point) {
+    arma::vec normal = point - _center;
+    return normal / arma::norm(normal);
+}
+
+bool Sphere::intersectedBy(const Ray &ray, arma::vec &intersection) {
+    arma::vec centerToOrigin = ray.point() - _center;
+
+    double x1 = 2.0 * arma::dot(centerToOrigin, ray.direction());
+    double x2 = arma::dot(ray.direction(), ray.direction());
+    double x3 = arma::dot(centerToOrigin, centerToOrigin) - (_r * _r);
+
+    double discriminant = std::pow(x1, 2) - 4 * x2 * x3;
+    if(discriminant < 0) return false;
+
+    double t1 = (std::sqrt(discriminant) - x1) / (2.0 * x2);
+    double t2 = (-std::sqrt(discriminant) - x1) / (2.0f * x2);
+    double t = t1 < t2? t1 : t2;
+
+    intersection = ray.point() + ray.direction() * t;
+    return true;
+}
+
+arma::vec Sphere::center() {
+    return _center;
+}
+
+double Sphere::r() {
+    return _r;
+}
+
+
+
+
