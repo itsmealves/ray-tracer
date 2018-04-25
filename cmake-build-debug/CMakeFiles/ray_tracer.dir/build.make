@@ -105,57 +105,9 @@ CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o.provides: CMakeFiles/ray_tracer.
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o
 
 
-CMakeFiles/ray_tracer.dir/world/World.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
-CMakeFiles/ray_tracer.dir/world/World.cpp.o: ../world/World.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ray_tracer.dir/world/World.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/world/World.cpp.o -c /home/gabriel/Projetos/ray-tracer/world/World.cpp
-
-CMakeFiles/ray_tracer.dir/world/World.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/world/World.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/world/World.cpp > CMakeFiles/ray_tracer.dir/world/World.cpp.i
-
-CMakeFiles/ray_tracer.dir/world/World.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/world/World.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/world/World.cpp -o CMakeFiles/ray_tracer.dir/world/World.cpp.s
-
-CMakeFiles/ray_tracer.dir/world/World.cpp.o.requires:
-
-.PHONY : CMakeFiles/ray_tracer.dir/world/World.cpp.o.requires
-
-CMakeFiles/ray_tracer.dir/world/World.cpp.o.provides: CMakeFiles/ray_tracer.dir/world/World.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/World.cpp.o.provides.build
-.PHONY : CMakeFiles/ray_tracer.dir/world/World.cpp.o.provides
-
-CMakeFiles/ray_tracer.dir/world/World.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/world/World.cpp.o
-
-
-CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
-CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o: ../engine/Ray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o -c /home/gabriel/Projetos/ray-tracer/engine/Ray.cpp
-
-CMakeFiles/ray_tracer.dir/engine/Ray.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/engine/Ray.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/engine/Ray.cpp > CMakeFiles/ray_tracer.dir/engine/Ray.cpp.i
-
-CMakeFiles/ray_tracer.dir/engine/Ray.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/engine/Ray.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/engine/Ray.cpp -o CMakeFiles/ray_tracer.dir/engine/Ray.cpp.s
-
-CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.requires:
-
-.PHONY : CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.requires
-
-CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.provides: CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.provides.build
-.PHONY : CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.provides
-
-CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o
-
-
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o: ../world/LightSource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o -c /home/gabriel/Projetos/ray-tracer/world/LightSource.cpp
 
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.i: cmake_force
@@ -177,33 +129,9 @@ CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o.provides: CMakeFiles/ray_trace
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o
 
 
-CMakeFiles/ray_tracer.dir/world/Thing.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
-CMakeFiles/ray_tracer.dir/world/Thing.cpp.o: ../world/Thing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ray_tracer.dir/world/Thing.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/world/Thing.cpp.o -c /home/gabriel/Projetos/ray-tracer/world/Thing.cpp
-
-CMakeFiles/ray_tracer.dir/world/Thing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/world/Thing.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/world/Thing.cpp > CMakeFiles/ray_tracer.dir/world/Thing.cpp.i
-
-CMakeFiles/ray_tracer.dir/world/Thing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/world/Thing.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/world/Thing.cpp -o CMakeFiles/ray_tracer.dir/world/Thing.cpp.s
-
-CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.requires:
-
-.PHONY : CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.requires
-
-CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.provides: CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.provides.build
-.PHONY : CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.provides
-
-CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/world/Thing.cpp.o
-
-
 CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
 CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o: ../things/Sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o -c /home/gabriel/Projetos/ray-tracer/things/Sphere.cpp
 
 CMakeFiles/ray_tracer.dir/things/Sphere.cpp.i: cmake_force
@@ -229,10 +157,7 @@ CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o.provides.build: CMakeFiles/ray_tra
 ray_tracer_OBJECTS = \
 "CMakeFiles/ray_tracer.dir/main.cpp.o" \
 "CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o" \
-"CMakeFiles/ray_tracer.dir/world/World.cpp.o" \
-"CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o" \
 "CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o" \
-"CMakeFiles/ray_tracer.dir/world/Thing.cpp.o" \
 "CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o"
 
 # External object files for target ray_tracer
@@ -240,15 +165,12 @@ ray_tracer_EXTERNAL_OBJECTS =
 
 ray_tracer: CMakeFiles/ray_tracer.dir/main.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o
-ray_tracer: CMakeFiles/ray_tracer.dir/world/World.cpp.o
-ray_tracer: CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o
-ray_tracer: CMakeFiles/ray_tracer.dir/world/Thing.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/build.make
 ray_tracer: /usr/lib/libarmadillo.so
 ray_tracer: CMakeFiles/ray_tracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ray_tracer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ray_tracer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ray_tracer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -258,10 +180,7 @@ CMakeFiles/ray_tracer.dir/build: ray_tracer
 
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/main.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o.requires
-CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/world/World.cpp.o.requires
-CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o.requires
-CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/world/Thing.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o.requires
 
 .PHONY : CMakeFiles/ray_tracer.dir/requires

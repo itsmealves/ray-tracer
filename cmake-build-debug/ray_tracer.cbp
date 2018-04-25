@@ -82,9 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/engine/Ray.cpp">
-			<Option target="ray_tracer"/>
-		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/engine/Ray.h">
 			<Option target="ray_tracer"/>
 		</Unit>
@@ -109,13 +106,7 @@
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/LightSource.h">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/Thing.cpp">
-			<Option target="ray_tracer"/>
-		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/Thing.h">
-			<Option target="ray_tracer"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/World.cpp">
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/World.h">

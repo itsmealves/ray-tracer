@@ -22,7 +22,7 @@ Renderer::Renderer(int windowWidth, int windowHeight, int imageWidth, int imageH
     _height = imageHeight;
 }
 
-Ray Renderer::shoot(arma::vec point) {
+const Ray Renderer::shoot(const arma::vec &point) const {
     arma::vec direction = _kInv * point;
     arma::vec rayPoint = arma::vec({0, 0, 0});
     direction /= arma::norm(direction);
@@ -30,7 +30,7 @@ Ray Renderer::shoot(arma::vec point) {
     return Ray(rayPoint, direction);
 }
 
-void Renderer::render(World world, std::string filePath) {
+const void Renderer::render(const World &world, const std::string &filePath) const {
     Thing *t = world.things()[0];
 
     std::ofstream file;

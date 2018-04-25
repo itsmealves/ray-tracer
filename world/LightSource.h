@@ -13,10 +13,17 @@ private:
     arma::vec _position;
     arma::vec _intensity;
 public:
-    LightSource(arma::vec position, arma::vec intensity);
-    Ray lightRayTo(arma::vec point);
-    arma::vec position();
-    arma::vec intensity();
+    LightSource(const arma::vec &position, const arma::vec &intensity) : _position(position), _intensity(intensity) {};
+
+    const Ray lightRayTo(const arma::vec &point) const;
+
+    const arma::vec &position() const {
+        return _position;
+    };
+
+    const arma::vec &intensity() const {
+        return _intensity;
+    };
 };
 
 

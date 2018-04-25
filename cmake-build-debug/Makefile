@@ -123,33 +123,6 @@ ray_tracer/fast:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/build
 .PHONY : ray_tracer/fast
 
-engine/Ray.o: engine/Ray.cpp.o
-
-.PHONY : engine/Ray.o
-
-# target to build an object file
-engine/Ray.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/engine/Ray.cpp.o
-.PHONY : engine/Ray.cpp.o
-
-engine/Ray.i: engine/Ray.cpp.i
-
-.PHONY : engine/Ray.i
-
-# target to preprocess a source file
-engine/Ray.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/engine/Ray.cpp.i
-.PHONY : engine/Ray.cpp.i
-
-engine/Ray.s: engine/Ray.cpp.s
-
-.PHONY : engine/Ray.s
-
-# target to generate assembly for a file
-engine/Ray.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/engine/Ray.cpp.s
-.PHONY : engine/Ray.cpp.s
-
 engine/Renderer.o: engine/Renderer.cpp.o
 
 .PHONY : engine/Renderer.o
@@ -258,60 +231,6 @@ world/LightSource.cpp.s:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/LightSource.cpp.s
 .PHONY : world/LightSource.cpp.s
 
-world/Thing.o: world/Thing.cpp.o
-
-.PHONY : world/Thing.o
-
-# target to build an object file
-world/Thing.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/Thing.cpp.o
-.PHONY : world/Thing.cpp.o
-
-world/Thing.i: world/Thing.cpp.i
-
-.PHONY : world/Thing.i
-
-# target to preprocess a source file
-world/Thing.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/Thing.cpp.i
-.PHONY : world/Thing.cpp.i
-
-world/Thing.s: world/Thing.cpp.s
-
-.PHONY : world/Thing.s
-
-# target to generate assembly for a file
-world/Thing.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/Thing.cpp.s
-.PHONY : world/Thing.cpp.s
-
-world/World.o: world/World.cpp.o
-
-.PHONY : world/World.o
-
-# target to build an object file
-world/World.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/World.cpp.o
-.PHONY : world/World.cpp.o
-
-world/World.i: world/World.cpp.i
-
-.PHONY : world/World.i
-
-# target to preprocess a source file
-world/World.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/World.cpp.i
-.PHONY : world/World.cpp.i
-
-world/World.s: world/World.cpp.s
-
-.PHONY : world/World.s
-
-# target to generate assembly for a file
-world/World.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/world/World.cpp.s
-.PHONY : world/World.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,9 +240,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ray_tracer"
 	@echo "... edit_cache"
-	@echo "... engine/Ray.o"
-	@echo "... engine/Ray.i"
-	@echo "... engine/Ray.s"
 	@echo "... engine/Renderer.o"
 	@echo "... engine/Renderer.i"
 	@echo "... engine/Renderer.s"
@@ -336,12 +252,6 @@ help:
 	@echo "... world/LightSource.o"
 	@echo "... world/LightSource.i"
 	@echo "... world/LightSource.s"
-	@echo "... world/Thing.o"
-	@echo "... world/Thing.i"
-	@echo "... world/Thing.s"
-	@echo "... world/World.o"
-	@echo "... world/World.i"
-	@echo "... world/World.s"
 .PHONY : help
 
 

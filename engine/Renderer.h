@@ -9,15 +9,15 @@
 #include "../world/World.h"
 #include "Ray.h"
 
-class Renderer {
+class Renderer {    
 private:
     int _width;
     int _height;
     arma::mat _kInv;
-    Ray shoot(arma::vec point);
+    const Ray shoot(const arma::vec &point) const;
 public:
     Renderer(int windowWidth, int windowHeight, int imageWidth, int imageHeight, double f);
-    void render(World world, std::string filePath);
+    const void render(const World &world, const std::string &filePath) const;
 };
 
 

@@ -12,10 +12,13 @@ class Thing {
 private:
     arma::vec _color;
 public:
-    Thing(arma::vec color);
+    Thing(const arma::vec &color) : _color(color) {}
     virtual arma::vec normalTo(const arma::vec &point) = 0;
     virtual bool intersectedBy(const Ray &ray, arma::vec &intersection) = 0;
-    arma::vec color();
+
+    const arma::vec &color() const {
+        return _color;
+    };
 };
 
 

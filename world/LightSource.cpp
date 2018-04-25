@@ -4,20 +4,7 @@
 
 #include "LightSource.h"
 
-LightSource::LightSource(arma::vec position, arma::vec intensity) {
-    _position = position;
-    _intensity = intensity;
-}
-
-arma::vec LightSource::position() {
-    return _position;
-}
-
-arma::vec LightSource::intensity() {
-    return _intensity;
-}
-
-Ray LightSource::lightRayTo(arma::vec point) {
+const Ray LightSource::lightRayTo(const arma::vec &point) const {
     arma::vec rayPoint = _position;
     arma::vec direction = _position - point;
     direction /= arma::norm(direction);

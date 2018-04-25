@@ -17,12 +17,27 @@ private:
     std::vector<Thing *> _things;
     std::vector<LightSource> _lightSources;
 public:
-    World(arma::vec ambientColor);
-    arma::vec ambientColor();
-    std::vector<Thing *> things();
-    std::vector<LightSource> lightSources();
-    void addThing(Thing *thing);
-    void addLightSource(LightSource lightSource);
+    World(const arma::vec &ambientColor) : _ambientColor(ambientColor) {};
+
+    const arma::vec &ambientColor() const {
+        return _ambientColor;
+    }
+
+    const std::vector<Thing *> &things() const {
+        return _things;
+    }
+
+    const std::vector<LightSource> &lightSources() const {
+        return _lightSources;
+    }
+
+    void addThing(Thing *thing) {
+        _things.push_back(thing);
+    }
+
+    void addLightSource(const LightSource &lightSource) {
+        _lightSources.push_back(lightSource);
+    }
 };
 
 

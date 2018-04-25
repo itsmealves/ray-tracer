@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/gabriel/Projetos/ray-tracer/engine/Ray.cpp
-Ray.h
-/home/gabriel/Projetos/ray-tracer/engine/Ray.h
-
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
 armadillo
 -
@@ -60,19 +56,11 @@ armadillo
 ../engine/Ray.h
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
 
-/home/gabriel/Projetos/ray-tracer/world/Thing.cpp
-Thing.h
-/home/gabriel/Projetos/ray-tracer/world/Thing.h
-
 /home/gabriel/Projetos/ray-tracer/world/Thing.h
 armadillo
 -
 ../engine/Ray.h
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
-
-/home/gabriel/Projetos/ray-tracer/world/World.cpp
-World.h
-/home/gabriel/Projetos/ray-tracer/world/World.h
 
 /home/gabriel/Projetos/ray-tracer/world/World.h
 armadillo
