@@ -17,7 +17,7 @@ public:
     arma::vec center();
     double r();
     arma::vec normalTo(const arma::vec &point) override;
-    bool intersectedBy(const Ray &ray, arma::vec &intersection) override;
+    Hit intersectedBy(const Ray &ray) override;
 };
 
 

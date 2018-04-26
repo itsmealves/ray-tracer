@@ -9,7 +9,7 @@
 #include "../world/World.h"
 #include "Ray.h"
 
-class Renderer {    
+class Renderer {
 private:
     int _width;
     int _height;

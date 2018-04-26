@@ -31,8 +31,6 @@ const Ray Renderer::shoot(const arma::vec &point) const {
 }
 
 const void Renderer::render(const World &world, const std::string &filePath) const {
-    Thing *t = world.things()[0];
-
     std::ofstream file;
     file.open(filePath);
 
@@ -43,24 +41,36 @@ const void Renderer::render(const World &world, const std::string &filePath) con
 
     for(int j = 0; j < _height; j++) {
         for(int i = 0; i < _width; i++) {
-            arma::vec intersection;
+            Hit hit = Hit();
+
             arma::vec color = world.ambientColor();
             arma::vec currentPoint = arma::vec({(double) i, (double) j, 1});
-
+            //arma::vec currentPoint = arma::vec({960, 540, 1});
             Ray ray = shoot(currentPoint);
 
-            if(t->intersectedBy(ray, intersection)) {
+            for(unsigned long k = 0; k < world.things().size(); k++) {
+                Thing *t = world.things().at(k);
+                Hit currentHit = t->intersectedBy(ray);
+
+                if(currentHit < hit) {
+                    hit = currentHit;
+                }
+            }
+
+
+
+
+            if(hit.happened()) {
                 arma::vec resultColor = arma::vec({0, 0, 0});
 
                 for(unsigned long k = 0; k < world.lightSources().size(); k++) {
                     LightSource l = world.lightSources().at(k);
-                    Ray lightRay = l.lightRayTo(intersection);
-                    arma::vec normal = t->normalTo(intersection);
+                    Ray lightRay = l.lightRayTo(hit.hitPoint());
 
-                    double cosine = arma::dot(normal, lightRay.direction());
+                    double cosine = arma::dot(hit.normal(), lightRay.direction());
                     double component = cosine > 0.0? cosine : 0.0;
 
-                    resultColor += (t->color() % l.intensity()) * component;
+                    resultColor += (hit.color() % l.intensity()) * component;
                 }
 
                 resultColor(0) = resultColor(0) > 255.0? 255.0 : resultColor(0);

@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/gabriel/Projetos/ray-tracer/engine/Hit.h
+armadillo
+-
+
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
 armadillo
 -
@@ -61,6 +65,8 @@ armadillo
 -
 ../engine/Ray.h
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
+../engine/Hit.h
+/home/gabriel/Projetos/ray-tracer/engine/Hit.h
 
 /home/gabriel/Projetos/ray-tracer/world/World.h
 armadillo

@@ -7,6 +7,7 @@
 
 #include <armadillo>
 #include "../engine/Ray.h"
+#include "../engine/Hit.h"
 
 class Thing {
 private:
@@ -14,7 +15,7 @@ private:
 public:
     Thing(const arma::vec &color) : _color(color) {}
     virtual arma::vec normalTo(const arma::vec &point) = 0;
-    virtual bool intersectedBy(const Ray &ray, arma::vec &intersection) = 0;
+    virtual Hit intersectedBy(const Ray &ray) = 0;
 
     const arma::vec &color() const {
         return _color;

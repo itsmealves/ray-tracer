@@ -14,7 +14,7 @@ arma::vec Sphere::normalTo(const arma::vec &point) {
     return normal / arma::norm(normal);
 }
 
-bool Sphere::intersectedBy(const Ray &ray, arma::vec &intersection) {
+Hit Sphere::intersectedBy(const Ray &ray) {
     arma::vec centerToOrigin = ray.point() - _center;
 
     double x1 = 2.0 * arma::dot(centerToOrigin, ray.direction());
@@ -22,14 +22,14 @@ bool Sphere::intersectedBy(const Ray &ray, arma::vec &intersection) {
     double x3 = arma::dot(centerToOrigin, centerToOrigin) - (_r * _r);
 
     double discriminant = std::pow(x1, 2) - 4 * x2 * x3;
-    if(discriminant < 0) return false;
+    if(discriminant < 0) return Hit();
 
     double t1 = (std::sqrt(discriminant) - x1) / (2.0 * x2);
     double t2 = (-std::sqrt(discriminant) - x1) / (2.0f * x2);
     double t = t1 < t2? t1 : t2;
 
-    intersection = ray.point() + ray.direction() * t;
-    return true;
+    arma::vec intersection = ray.point() + ray.direction() * t;
+    return Hit(color(), normalTo(intersection), intersection);
 }
 
 arma::vec Sphere::center() {

@@ -38,20 +38,22 @@ int main(int argc, char *argv[]) {
     World world(arma::vec({100, 100, 100}));
     std::cout << "Mundo criado com cor ambiente " << hexColor(world.ambientColor()) << std::endl;
 
-    Sphere sphere(arma::vec({255, 255, 255}), arma::vec({0, 0, 10}), 2);
+    Sphere sphere1(arma::vec({255, 255, 255}), arma::vec({10, 0, 10}), 3);
+    Sphere sphere2(arma::vec({255, 255, 255}), arma::vec({-10, 0, 10}), 3);
     std::cout << "Esfera instanciada:" << std::endl;
-    std::cout << "\t* Cor: " << hexColor(sphere.color()) << std::endl;
-    std::cout << "\t* Centro: (" << sphere.center()(0) << "," << sphere.center()(1) << "," << sphere.center()(2) << ")" << std::endl;
-    std::cout << "\t* Raio: " << sphere.r() << std::endl << std::endl;
+    std::cout << "\t* Cor: " << hexColor(sphere1.color()) << std::endl;
+    std::cout << "\t* Centro: (" << sphere1.center()(0) << "," << sphere1.center()(1) << "," << sphere1.center()(2) << ")" << std::endl;
+    std::cout << "\t* Raio: " << sphere1.r() << std::endl << std::endl;
 
-    LightSource source1(arma::vec({0, 7, 0}), arma::vec({0.3, 0.05, 0.05}));
+    LightSource source1(arma::vec({0, 7, 5}), arma::vec({0.3, 0.05, 0.05}));
     LightSource source2(arma::vec({7, -7, 0}), arma::vec({0.05, 0.3, 0.05}));
     LightSource source3(arma::vec({-7, -7, 0}), arma::vec({0.05, 0.05, 0.3}));
     std::cout << "Fonte de luz criada em (" << source1.position()(0) << "," << source1.position()(1) << "," << source1.position()(2) << ")" << " com intensidade " << source1.intensity().t();
     std::cout << "Fonte de luz criada em (" << source2.position()(0) << "," << source2.position()(1) << "," << source2.position()(2) << ")" << " com intensidade " << source2.intensity().t();
     std::cout << "Fonte de luz criada em (" << source3.position()(0) << "," << source3.position()(1) << "," << source3.position()(2) << ")" << " com intensidade " << source3.intensity().t();
 
-    world.addThing(&sphere);
+    world.addThing(&sphere1);
+    world.addThing(&sphere2);
     world.addLightSource(source1);
     world.addLightSource(source2);
     world.addLightSource(source3);
