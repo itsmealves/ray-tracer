@@ -6,20 +6,21 @@
 #define RAY_TRACER_HIT_H
 
 #include <armadillo>
+#include "../world/Material.h"
 
 class Hit {
 private:
-    arma::vec _color;
+    bool _happened;
     arma::vec _normal;
     arma::vec _hitPoint;
-    bool _happened;
+    Material _material;
 public:
     Hit() : _happened(false) {};
-    Hit(const arma::vec &color, const arma::vec &normal, const arma::vec &hitPoint) :
-            _happened(true), _color(color), _normal(normal), _hitPoint(hitPoint) {};
+    Hit(const Material &material, const arma::vec &normal, const arma::vec &hitPoint) :
+            _happened(true), _material(material), _normal(normal), _hitPoint(hitPoint) {};
 
-    const arma::vec &color() const {
-        return _color;
+    const Material &material() const {
+        return _material;
     }
 
     const arma::vec &normal() const {

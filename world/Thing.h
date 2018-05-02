@@ -8,17 +8,18 @@
 #include <armadillo>
 #include "../engine/Ray.h"
 #include "../engine/Hit.h"
+#include "Material.h"
 
 class Thing {
 private:
-    arma::vec _color;
+    Material _material;
 public:
-    Thing(const arma::vec &color) : _color(color) {}
-    virtual arma::vec normalTo(const arma::vec &point) = 0;
-    virtual Hit intersectedBy(const Ray &ray) = 0;
+    Thing(const Material &material) : _material(material) {}
+    virtual const arma::vec normalTo(const arma::vec &point) const = 0;
+    virtual const Hit intersectedBy(const Ray &ray) const = 0;
 
-    const arma::vec &color() const {
-        return _color;
+    const Material &material() const {
+        return _material;
     };
 };
 

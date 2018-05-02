@@ -109,6 +109,9 @@
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/LightSource.h">
 			<Option target="ray_tracer"/>
 		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/Material.h">
+			<Option target="ray_tracer"/>
+		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/Thing.h">
 			<Option target="ray_tracer"/>
 		</Unit>

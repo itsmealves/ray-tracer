@@ -4,17 +4,7 @@
 
 #include "Sphere.h"
 
-Sphere::Sphere(const arma::vec &color, const arma::vec &center, double r) : Thing(color) {
-    _center = center;
-    _r = r;
-}
-
-arma::vec Sphere::normalTo(const arma::vec &point) {
-    arma::vec normal = point - _center;
-    return normal / arma::norm(normal);
-}
-
-Hit Sphere::intersectedBy(const Ray &ray) {
+const Hit Sphere::intersectedBy(const Ray &ray) const {
     arma::vec centerToOrigin = ray.point() - _center;
 
     double x1 = 2.0 * arma::dot(centerToOrigin, ray.direction());
@@ -29,15 +19,7 @@ Hit Sphere::intersectedBy(const Ray &ray) {
     double t = t1 < t2? t1 : t2;
 
     arma::vec intersection = ray.point() + ray.direction() * t;
-    return Hit(color(), normalTo(intersection), intersection);
-}
-
-arma::vec Sphere::center() {
-    return _center;
-}
-
-double Sphere::r() {
-    return _r;
+    return Hit(material(), normalTo(intersection), intersection);
 }
 
 

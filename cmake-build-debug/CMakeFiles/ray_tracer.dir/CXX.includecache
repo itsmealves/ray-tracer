@@ -9,6 +9,8 @@
 /home/gabriel/Projetos/ray-tracer/engine/Hit.h
 armadillo
 -
+../world/Material.h
+/home/gabriel/Projetos/ray-tracer/world/Material.h
 
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
 armadillo
@@ -60,6 +62,10 @@ armadillo
 ../engine/Ray.h
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
 
+/home/gabriel/Projetos/ray-tracer/world/Material.h
+armadillo
+-
+
 /home/gabriel/Projetos/ray-tracer/world/Thing.h
 armadillo
 -
@@ -67,6 +73,8 @@ armadillo
 /home/gabriel/Projetos/ray-tracer/engine/Ray.h
 ../engine/Hit.h
 /home/gabriel/Projetos/ray-tracer/engine/Hit.h
+Material.h
+/home/gabriel/Projetos/ray-tracer/world/Material.h
 
 /home/gabriel/Projetos/ray-tracer/world/World.h
 armadillo

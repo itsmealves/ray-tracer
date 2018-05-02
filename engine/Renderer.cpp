@@ -45,7 +45,6 @@ const void Renderer::render(const World &world, const std::string &filePath) con
 
             arma::vec color = world.ambientColor();
             arma::vec currentPoint = arma::vec({(double) i, (double) j, 1});
-            //arma::vec currentPoint = arma::vec({960, 540, 1});
             Ray ray = shoot(currentPoint);
 
             for(unsigned long k = 0; k < world.things().size(); k++) {
@@ -58,19 +57,26 @@ const void Renderer::render(const World &world, const std::string &filePath) con
             }
 
 
-
-
             if(hit.happened()) {
                 arma::vec resultColor = arma::vec({0, 0, 0});
 
                 for(unsigned long k = 0; k < world.lightSources().size(); k++) {
+                    Material material = hit.material();
                     LightSource l = world.lightSources().at(k);
                     Ray lightRay = l.lightRayTo(hit.hitPoint());
 
-                    double cosine = arma::dot(hit.normal(), lightRay.direction());
-                    double component = cosine > 0.0? cosine : 0.0;
+                    arma::vec h = ray.direction() + lightRay.direction();
+                    arma::vec hNorm = h / arma::norm(h);
 
-                    resultColor += (hit.color() % l.intensity()) * component;
+                    double lambertCosine = arma::dot(hit.normal(), lightRay.direction());
+                    double lambertComponent = lambertCosine > 0.0? lambertCosine : 0.0;
+                    arma::vec lambert = (material.diffuseColor() % l.intensity()) * lambertComponent;
+
+                    double phongCosine = arma::dot(hit.normal(), hNorm);
+                    double phongComponent = phongCosine > 0.0? std::pow(phongCosine, material.shineness()) : 0.0;
+                    arma::vec phong = (material.specularColor() % l.intensity()) * phongComponent;
+
+                    resultColor += lambert + phong;
                 }
 
                 resultColor(0) = resultColor(0) > 255.0? 255.0 : resultColor(0);
