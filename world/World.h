@@ -10,6 +10,7 @@
 #include <vector>
 #include "LightSource.h"
 #include "Thing.h"
+#include "../util/text.h"
 
 class World {
 private:
@@ -17,7 +18,9 @@ private:
     std::vector<Thing *> _things;
     std::vector<LightSource> _lightSources;
 public:
-    World(const arma::vec &ambientColor) : _ambientColor(ambientColor) {};
+    World(const arma::vec &ambientColor) : _ambientColor(ambientColor) {
+        std::cout << "Mundo criado com cor ambiente " << colorToHex(ambientColor) << std::endl;
+    };
 
     const arma::vec &ambientColor() const {
         return _ambientColor;
@@ -32,10 +35,16 @@ public:
     }
 
     void addThing(Thing *thing) {
+        std::cout << "Adicionando objeto do tipo " << thing->name() << " ao mundo:" << std::endl;
+        std::cout << thing->getInfo() << std::endl;
+
         _things.push_back(thing);
     }
 
     void addLightSource(const LightSource &lightSource) {
+        std::cout << "Adicionando fonte de luz ao mundo:" << std::endl;
+        std::cout << lightSource.getInfo() << std::endl;
+
         _lightSources.push_back(lightSource);
     }
 };

@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+things/Plane.o: things/Plane.cpp.o
+
+.PHONY : things/Plane.o
+
+# target to build an object file
+things/Plane.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Plane.cpp.o
+.PHONY : things/Plane.cpp.o
+
+things/Plane.i: things/Plane.cpp.i
+
+.PHONY : things/Plane.i
+
+# target to preprocess a source file
+things/Plane.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Plane.cpp.i
+.PHONY : things/Plane.cpp.i
+
+things/Plane.s: things/Plane.cpp.s
+
+.PHONY : things/Plane.s
+
+# target to generate assembly for a file
+things/Plane.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Plane.cpp.s
+.PHONY : things/Plane.cpp.s
+
 things/Sphere.o: things/Sphere.cpp.o
 
 .PHONY : things/Sphere.o
@@ -203,6 +230,33 @@ things/Sphere.s: things/Sphere.cpp.s
 things/Sphere.cpp.s:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Sphere.cpp.s
 .PHONY : things/Sphere.cpp.s
+
+things/Triangle.o: things/Triangle.cpp.o
+
+.PHONY : things/Triangle.o
+
+# target to build an object file
+things/Triangle.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o
+.PHONY : things/Triangle.cpp.o
+
+things/Triangle.i: things/Triangle.cpp.i
+
+.PHONY : things/Triangle.i
+
+# target to preprocess a source file
+things/Triangle.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Triangle.cpp.i
+.PHONY : things/Triangle.cpp.i
+
+things/Triangle.s: things/Triangle.cpp.s
+
+.PHONY : things/Triangle.s
+
+# target to generate assembly for a file
+things/Triangle.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Triangle.cpp.s
+.PHONY : things/Triangle.cpp.s
 
 world/LightSource.o: world/LightSource.cpp.o
 
@@ -246,9 +300,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... things/Plane.o"
+	@echo "... things/Plane.i"
+	@echo "... things/Plane.s"
 	@echo "... things/Sphere.o"
 	@echo "... things/Sphere.i"
 	@echo "... things/Sphere.s"
+	@echo "... things/Triangle.o"
+	@echo "... things/Triangle.i"
+	@echo "... things/Triangle.s"
 	@echo "... world/LightSource.o"
 	@echo "... world/LightSource.i"
 	@echo "... world/LightSource.s"

@@ -35,10 +35,8 @@ public:
         return _happened;
     }
 
-    bool operator<(const Hit &hit) const {
-        if(!_happened && hit.happened()) return false;
-        else if(_happened && !hit.happened()) return true;
-        else if(_happened && hit.happened()) return _hitPoint(2) < hit.hitPoint()(2);
+    const bool operator<(const Hit &hit) const {
+        if(happened() && hit.happened()) return hitPoint().at(2) < hit.hitPoint().at(2);
         else return false;
     }
 

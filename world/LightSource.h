@@ -7,6 +7,7 @@
 
 #include <armadillo>
 #include "../engine/Ray.h"
+#include "../util/text.h"
 
 class LightSource {
 private:
@@ -24,6 +25,17 @@ public:
     const arma::vec &intensity() const {
         return _intensity;
     };
+
+    const std::string getInfo() const {
+        std::stringstream stream;
+
+        stream << "\t* Cor: " << colorToHex(intensity()) << std::endl;
+        stream << "\t* Posição: (" << position().at(0) << ", ";
+        stream << position().at(1) << ", ";
+        stream << position().at(2) << ")" << std::endl;
+
+        return stream.str();
+    }
 };
 
 

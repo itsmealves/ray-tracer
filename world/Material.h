@@ -6,6 +6,7 @@
 #define RAY_TRACER_MATERIAL_H
 
 #include <armadillo>
+#include "../util/text.h"
 
 class Material {
 private:
@@ -27,6 +28,16 @@ public:
 
     const double &shineness() const {
         return _shineness;
+    }
+
+    const std::string getInfo() const {
+        std::stringstream stream;
+
+        stream << "\t\t* Cor difusa: " << colorToHex(diffuseColor()) << std::endl;
+        stream << "\t\t* Cor especular: " << colorToHex(specularColor()) << std::endl;
+        stream << "\t\t* Shineness: " << shineness() << std::endl;
+
+        return stream.str();
     }
 };
 

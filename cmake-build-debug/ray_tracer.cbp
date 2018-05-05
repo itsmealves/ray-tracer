@@ -97,10 +97,25 @@
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/main.cpp">
 			<Option target="ray_tracer"/>
 		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Plane.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Plane.h">
+			<Option target="ray_tracer"/>
+		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Sphere.cpp">
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Sphere.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Triangle.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Triangle.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/text.h">
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/world/LightSource.cpp">
