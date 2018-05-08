@@ -22,17 +22,20 @@ int main(int argc, char *argv[]) {
     int imageHeight = std::stoi(argv[5]);
 
     World world(arma::vec({50, 50, 50}));
-    Material material(arma::vec({200, 200, 200}), arma::vec({200, 200, 200}), 10);
+    Material material1(arma::vec({200, 200, 200}), 0);
+    Material material2(arma::vec({120, 120, 120}), 10);
 
-    Sphere sphere1(material, arma::vec({10, 0, 10}), 3);
-    Sphere sphere2(material, arma::vec({-10, 0, 10}), 3);
+    Sphere sphere1(material2, arma::vec({10, 0, 10}), 3);
+    Sphere sphere2(material2, arma::vec({-10, 0, 10}), 3);
 
-    Triangle triangle1(material, arma::vec({0,-3,12}), arma::vec({-2,2,10}), arma::vec({2, 2, 10}));
+    Plane plane1(material1, arma::vec({0, -5, 0}), arma::vec({0, 1, 0}));
+    Triangle triangle1(material2, arma::vec({0,-4.5,7}), arma::vec({-13,-4.5,13}), arma::vec({13, -4.5, 13}));
 
-    LightSource source1(arma::vec({0, 5, 5}), arma::vec({0.3, 0.05, 0.05}));
-    LightSource source2(arma::vec({5, -5, 5}), arma::vec({0.05, 0.3, 0.05}));
-    LightSource source3(arma::vec({-5, -5, 5}), arma::vec({0.05, 0.05, 0.3}));
+    LightSource source1(arma::vec({0, 7, 5}), arma::vec({0.25, 0.25, 0.25}));
+    LightSource source2(arma::vec({5, 5, 5}), arma::vec({0.25, 0.20, 0.05}));
+    LightSource source3(arma::vec({-5, 5, 5}), arma::vec({0.05, 0.25, 0.20}));
 
+    world.addThing(&plane1);
     world.addThing(&sphere1);
     world.addThing(&sphere2);
     world.addThing(&triangle1);

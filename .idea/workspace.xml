@@ -13,34 +13,19 @@
   <component name="ChangeListManager">
     <list default="true" id="72e8c0b8-57f4-490f-930f-335e2d9f5e6a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Plane.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Plane.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/out.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/out.ppm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ray_tracer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ray_tracer.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ray_tracer.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/Hit.h" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Hit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ray_tracer" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ray_tracer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Renderer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/things/Sphere.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/things/Sphere.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/things/Sphere.h" beforeDir="false" afterPath="$PROJECT_DIR$/things/Sphere.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/things/Triangle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/things/Triangle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/world/LightSource.h" beforeDir="false" afterPath="$PROJECT_DIR$/world/LightSource.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/world/Material.h" beforeDir="false" afterPath="$PROJECT_DIR$/world/Material.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/Thing.h" beforeDir="false" afterPath="$PROJECT_DIR$/world/Thing.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/World.h" beforeDir="false" afterPath="$PROJECT_DIR$/world/World.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +41,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="222">
+              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -65,25 +50,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Material.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Material.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/world/Material.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="200">
+              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding>
                 <element signature="e#103#123#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="World.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/world/World.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
-              <folding>
-                <element signature="e#98#118#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/util/text.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -101,7 +74,7 @@
       <file leaf-file-name="Sphere.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/things/Sphere.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="780">
               <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="41" selection-end-column="52" />
               <folding>
                 <element signature="e#99#119#0" expanded="true" />
@@ -119,11 +92,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Triangle.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/things/Triangle.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LightSource.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/world/LightSource.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="231">
+              <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
               <folding>
                 <element signature="e#109#129#0" expanded="true" />
               </folding>
@@ -131,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plane.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Plane.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/things/Plane.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="500">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#97#117#0" expanded="true" />
               </folding>
@@ -146,7 +128,7 @@
       <file leaf-file-name="Triangle.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/things/Triangle.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
+            <state relative-caret-position="1140">
               <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#103#123#0" expanded="true" />
@@ -158,8 +140,8 @@
       <file leaf-file-name="Renderer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/Renderer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="104" column="66" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="66" />
+            <state relative-caret-position="91">
+              <caret line="71" column="63" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -182,17 +164,17 @@
         <option value="$PROJECT_DIR$/things/Sphere.cpp" />
         <option value="$PROJECT_DIR$/engine/Hit.h" />
         <option value="$PROJECT_DIR$/things/Plane.cpp" />
-        <option value="$PROJECT_DIR$/things/Triangle.cpp" />
         <option value="$PROJECT_DIR$/world/Thing.h" />
         <option value="$PROJECT_DIR$/world/World.h" />
-        <option value="$PROJECT_DIR$/engine/Renderer.cpp" />
-        <option value="$PROJECT_DIR$/world/LightSource.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/util/text.h" />
-        <option value="$PROJECT_DIR$/world/Material.h" />
         <option value="$PROJECT_DIR$/things/Sphere.h" />
         <option value="$PROJECT_DIR$/things/Triangle.h" />
         <option value="$PROJECT_DIR$/things/Plane.h" />
+        <option value="$PROJECT_DIR$/engine/Renderer.cpp" />
+        <option value="$PROJECT_DIR$/world/LightSource.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/things/Triangle.cpp" />
+        <option value="$PROJECT_DIR$/world/Material.h" />
       </list>
     </option>
   </component>
@@ -291,12 +273,14 @@
       <workItem from="1524697929843" duration="3651000" />
       <workItem from="1524707676540" duration="60000" />
       <workItem from="1525299467938" duration="2752000" />
-      <workItem from="1525471315620" duration="11023000" />
+      <workItem from="1525471315620" duration="11120000" />
+      <workItem from="1525777565869" duration="1905000" />
+      <workItem from="1525780254300" duration="1419000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29174000" />
+    <option name="totallyTimeSpent" value="32595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
@@ -318,9 +302,9 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,9 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding>
-            <element signature="e#103#123#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -507,9 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#103#123#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -558,9 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#103#123#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -621,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/things/Triangle.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/things/Plane.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -639,9 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding>
-            <element signature="e#103#123#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,10 +622,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/world/World.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
+        <state relative-caret-position="900">
           <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
           <folding>
             <element signature="e#98#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/text.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/things/Triangle.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#103#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/things/Plane.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#97#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/things/Sphere.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="41" selection-end-column="52" />
+          <folding>
+            <element signature="e#99#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -672,17 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/Renderer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="104" column="66" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/world/LightSource.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+        <state relative-caret-position="231">
+          <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
           <folding>
             <element signature="e#109#129#0" expanded="true" />
           </folding>
@@ -691,57 +686,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        <state relative-caret-position="222">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/text.h">
+    <entry file="file://$PROJECT_DIR$/things/Triangle.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="500">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/Renderer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="71" column="63" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/world/Material.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="200">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding>
             <element signature="e#103#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/things/Sphere.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="41" selection-end-column="52" />
-          <folding>
-            <element signature="e#99#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/things/Triangle.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#103#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/things/Plane.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#97#117#0" expanded="true" />
           </folding>
         </state>
       </provider>

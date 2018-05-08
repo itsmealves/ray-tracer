@@ -29,7 +29,7 @@ public:
     const std::string getInfo() const {
         std::stringstream stream;
 
-        stream << "\t* Cor: " << colorToHex(intensity()) << std::endl;
+        stream << "\t* Cor: " << colorToHex(intensity() * 255) << std::endl;
         stream << "\t* Posição: (" << position().at(0) << ", ";
         stream << position().at(1) << ", ";
         stream << position().at(2) << ")" << std::endl;

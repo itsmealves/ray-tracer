@@ -13,10 +13,13 @@ private:
     arma::vec _diffuseColor;
     arma::vec _specularColor;
     double _shineness;
+    bool _isLambertian;
 public:
-    Material() {};
+    Material() = default;
+    Material(const arma::vec &color, const double shineness) : Material(color, color, shineness) {}
     Material(const arma::vec &diffuseColor, const arma::vec &specularColor, const double shineness) :
-            _diffuseColor(diffuseColor), _specularColor(specularColor), _shineness(shineness) {};
+            _diffuseColor(diffuseColor), _specularColor(specularColor),
+            _shineness(shineness), _isLambertian(shineness <= 0) {}
 
     const arma::vec &diffuseColor() const {
         return _diffuseColor;
@@ -28,6 +31,10 @@ public:
 
     const double &shineness() const {
         return _shineness;
+    }
+
+    const bool isLambertian() const {
+        return _isLambertian;
     }
 
     const std::string getInfo() const {

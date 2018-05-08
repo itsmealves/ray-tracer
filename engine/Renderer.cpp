@@ -72,16 +72,20 @@ const void Renderer::render(const World &world, const std::string &filePath) con
                     LightSource l = world.lightSources().at(k);
                     Ray lightRay = l.lightRayTo(hit.hitPoint());
 
-                    arma::vec h = /*ray.direction()*/ + lightRay.direction();
-                    arma::vec hNorm = h / arma::norm(h);
-
                     double lambertCosine = arma::dot(hit.normal(), lightRay.direction());
                     double lambertComponent = lambertCosine > 0.0? lambertCosine : 0.0;
                     arma::vec lambert = (material.diffuseColor() % l.intensity()) * lambertComponent;
+                    arma::vec phong({0, 0, 0});
 
-                    double phongCosine = arma::dot(hit.normal(), hNorm);
-                    double phongComponent = phongCosine > 0.0? std::pow(phongCosine, material.shineness()) : 0.0;
-                    arma::vec phong = (material.specularColor() % l.intensity()) * phongComponent;
+
+                    if(!material.isLambertian()) {
+                        arma::vec h = /*ray.direction() + */lightRay.direction();
+                        arma::vec hNorm = h / arma::norm(h);
+
+                        double phongCosine = arma::dot(hit.normal(), hNorm);
+                        double phongComponent = phongCosine > 0.0? std::pow(phongCosine, material.shineness()) : 0.0;
+                        phong = (material.specularColor() % l.intensity()) * phongComponent;
+                    }
 
                     resultColor += lambert + phong;
                 }
