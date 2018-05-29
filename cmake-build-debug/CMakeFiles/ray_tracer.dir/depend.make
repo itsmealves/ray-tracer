@@ -5,6 +5,9 @@ CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../engine/Hit.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../engine/Renderer.cpp
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../engine/Renderer.h
+CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/Element.h
+CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/Parser.h
+CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/RTParser.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/LightSource.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/Material.h
@@ -18,6 +21,9 @@ CMakeFiles/ray_tracer.dir/main.cpp.o: ../main.cpp
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../things/Plane.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../things/Sphere.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../things/Triangle.h
+CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/Element.h
+CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/Parser.h
+CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/RTParser.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../world/LightSource.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../world/Material.h
@@ -48,6 +54,50 @@ CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o: ../things/Triangle.h
 CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o: ../world/Material.h
 CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o: ../world/Thing.h
+
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../engine/Hit.h
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../engine/Ray.h
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../util/Element.cpp
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../util/Element.h
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../util/text.h
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../world/LightSource.h
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../world/Material.h
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../world/Thing.h
+
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../engine/Hit.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../engine/Ray.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/Element.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/ObjParser.cpp
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/ObjParser.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/Parser.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/text.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../world/LightSource.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../world/Material.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../world/Thing.h
+
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../engine/Hit.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../engine/Ray.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../util/Element.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../util/Parser.cpp
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../util/Parser.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../util/text.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../world/LightSource.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../world/Material.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../world/Thing.h
+
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../engine/Hit.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../engine/Ray.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../things/Plane.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../things/Sphere.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../util/Element.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../util/ObjParser.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../util/Parser.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../util/RTParser.cpp
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../util/RTParser.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../util/text.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../world/LightSource.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../world/Material.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../world/Thing.h
 
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o: ../util/text.h

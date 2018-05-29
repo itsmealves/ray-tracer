@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -201,6 +201,102 @@ CMakeFiles/ray_tracer.dir/things/Plane.cpp.o.provides: CMakeFiles/ray_tracer.dir
 CMakeFiles/ray_tracer.dir/things/Plane.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/things/Plane.cpp.o
 
 
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o: ../util/RTParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o -c /home/gabriel/Projetos/ray-tracer/util/RTParser.cpp
+
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/util/RTParser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/util/RTParser.cpp > CMakeFiles/ray_tracer.dir/util/RTParser.cpp.i
+
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/util/RTParser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/util/RTParser.cpp -o CMakeFiles/ray_tracer.dir/util/RTParser.cpp.s
+
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.requires:
+
+.PHONY : CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.requires
+
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.provides: CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.provides.build
+.PHONY : CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.provides
+
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o
+
+
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../util/Element.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ray_tracer.dir/util/Element.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/util/Element.cpp.o -c /home/gabriel/Projetos/ray-tracer/util/Element.cpp
+
+CMakeFiles/ray_tracer.dir/util/Element.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/util/Element.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/util/Element.cpp > CMakeFiles/ray_tracer.dir/util/Element.cpp.i
+
+CMakeFiles/ray_tracer.dir/util/Element.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/util/Element.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/util/Element.cpp -o CMakeFiles/ray_tracer.dir/util/Element.cpp.s
+
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o.requires:
+
+.PHONY : CMakeFiles/ray_tracer.dir/util/Element.cpp.o.requires
+
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o.provides: CMakeFiles/ray_tracer.dir/util/Element.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Element.cpp.o.provides.build
+.PHONY : CMakeFiles/ray_tracer.dir/util/Element.cpp.o.provides
+
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/util/Element.cpp.o
+
+
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/ObjParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o -c /home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp
+
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp > CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.i
+
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp -o CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.s
+
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.requires:
+
+.PHONY : CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.requires
+
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.provides: CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.provides.build
+.PHONY : CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.provides
+
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o
+
+
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o: ../util/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ray_tracer.dir/util/Parser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/util/Parser.cpp.o -c /home/gabriel/Projetos/ray-tracer/util/Parser.cpp
+
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/util/Parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/util/Parser.cpp > CMakeFiles/ray_tracer.dir/util/Parser.cpp.i
+
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/util/Parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/util/Parser.cpp -o CMakeFiles/ray_tracer.dir/util/Parser.cpp.s
+
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.requires:
+
+.PHONY : CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.requires
+
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.provides: CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.provides.build
+.PHONY : CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.provides
+
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/util/Parser.cpp.o
+
+
 # Object files for target ray_tracer
 ray_tracer_OBJECTS = \
 "CMakeFiles/ray_tracer.dir/main.cpp.o" \
@@ -208,7 +304,11 @@ ray_tracer_OBJECTS = \
 "CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o" \
 "CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o" \
 "CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o" \
-"CMakeFiles/ray_tracer.dir/things/Plane.cpp.o"
+"CMakeFiles/ray_tracer.dir/things/Plane.cpp.o" \
+"CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o" \
+"CMakeFiles/ray_tracer.dir/util/Element.cpp.o" \
+"CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o" \
+"CMakeFiles/ray_tracer.dir/util/Parser.cpp.o"
 
 # External object files for target ray_tracer
 ray_tracer_EXTERNAL_OBJECTS =
@@ -219,10 +319,14 @@ ray_tracer: CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/things/Plane.cpp.o
+ray_tracer: CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o
+ray_tracer: CMakeFiles/ray_tracer.dir/util/Element.cpp.o
+ray_tracer: CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o
+ray_tracer: CMakeFiles/ray_tracer.dir/util/Parser.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/build.make
 ray_tracer: /usr/lib/libarmadillo.so
 ray_tracer: CMakeFiles/ray_tracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ray_tracer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ray_tracer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ray_tracer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -236,6 +340,10 @@ CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/world/LightSource.
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/things/Plane.cpp.o.requires
+CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o.requires
+CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/util/Element.cpp.o.requires
+CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o.requires
+CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/util/Parser.cpp.o.requires
 
 .PHONY : CMakeFiles/ray_tracer.dir/requires
 

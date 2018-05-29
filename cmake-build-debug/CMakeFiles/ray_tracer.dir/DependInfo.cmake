@@ -9,6 +9,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gabriel/Projetos/ray-tracer/things/Plane.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Plane.cpp.o"
   "/home/gabriel/Projetos/ray-tracer/things/Sphere.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o"
   "/home/gabriel/Projetos/ray-tracer/things/Triangle.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o"
+  "/home/gabriel/Projetos/ray-tracer/util/Element.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/Element.cpp.o"
+  "/home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o"
+  "/home/gabriel/Projetos/ray-tracer/util/Parser.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/Parser.cpp.o"
+  "/home/gabriel/Projetos/ray-tracer/util/RTParser.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o"
   "/home/gabriel/Projetos/ray-tracer/world/LightSource.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

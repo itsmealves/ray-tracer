@@ -11,6 +11,7 @@
 #include "LightSource.h"
 #include "Thing.h"
 #include "../util/text.h"
+#include "../util/RTParser.h"
 
 class World {
 private:
@@ -18,9 +19,25 @@ private:
     std::vector<Thing *> _things;
     std::vector<LightSource> _lightSources;
 public:
-    World(const arma::vec &ambientColor) : _ambientColor(ambientColor) {
+    World() : World(arma::vec({0, 0, 0})) {}
+
+    explicit World(const arma::vec &ambientColor) : _ambientColor(ambientColor) {
         std::cout << "Mundo criado com cor ambiente " << colorToHex(ambientColor) << std::endl;
     };
+
+    const void fillFrom(const std::string &descriptionFilename) {
+        RTParser parser;
+
+        if(parser.parse(descriptionFilename)) {
+            for(Thing *t : parser.things())
+                addThing(t);
+
+            for(const LightSource &l : parser.lightSources())
+                addLightSource(l);
+
+            _ambientColor = parser.ambientColor();
+        }
+    }
 
     const arma::vec &ambientColor() const {
         return _ambientColor;

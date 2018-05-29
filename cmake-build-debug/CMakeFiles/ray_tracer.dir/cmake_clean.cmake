@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o"
   "CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o"
   "CMakeFiles/ray_tracer.dir/things/Plane.cpp.o"
+  "CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o"
+  "CMakeFiles/ray_tracer.dir/util/Element.cpp.o"
+  "CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o"
+  "CMakeFiles/ray_tracer.dir/util/Parser.cpp.o"
   "ray_tracer.pdb"
   "ray_tracer"
 )

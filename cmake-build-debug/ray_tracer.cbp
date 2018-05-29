@@ -17,6 +17,16 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gabriel/Projetos/ray-tracer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/home/gabriel/Projetos/ray-tracer/cmake-build-debug"/>
 				<Option type="4"/>
@@ -71,16 +81,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/gabriel/Projetos/ray-tracer/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabriel/Projetos/ray-tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 		</Build>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/engine/Hit.h">
 			<Option target="ray_tracer"/>
@@ -113,6 +113,30 @@
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Triangle.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Element.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Element.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/ObjParser.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Parser.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Parser.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/RTParser.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/RTParser.h">
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/text.h">

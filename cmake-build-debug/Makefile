@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -56,27 +56,27 @@ CMAKE_BINARY_DIR = /home/gabriel/Projetos/ray-tracer/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -258,6 +258,114 @@ things/Triangle.cpp.s:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Triangle.cpp.s
 .PHONY : things/Triangle.cpp.s
 
+util/Element.o: util/Element.cpp.o
+
+.PHONY : util/Element.o
+
+# target to build an object file
+util/Element.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Element.cpp.o
+.PHONY : util/Element.cpp.o
+
+util/Element.i: util/Element.cpp.i
+
+.PHONY : util/Element.i
+
+# target to preprocess a source file
+util/Element.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Element.cpp.i
+.PHONY : util/Element.cpp.i
+
+util/Element.s: util/Element.cpp.s
+
+.PHONY : util/Element.s
+
+# target to generate assembly for a file
+util/Element.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Element.cpp.s
+.PHONY : util/Element.cpp.s
+
+util/ObjParser.o: util/ObjParser.cpp.o
+
+.PHONY : util/ObjParser.o
+
+# target to build an object file
+util/ObjParser.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o
+.PHONY : util/ObjParser.cpp.o
+
+util/ObjParser.i: util/ObjParser.cpp.i
+
+.PHONY : util/ObjParser.i
+
+# target to preprocess a source file
+util/ObjParser.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.i
+.PHONY : util/ObjParser.cpp.i
+
+util/ObjParser.s: util/ObjParser.cpp.s
+
+.PHONY : util/ObjParser.s
+
+# target to generate assembly for a file
+util/ObjParser.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.s
+.PHONY : util/ObjParser.cpp.s
+
+util/Parser.o: util/Parser.cpp.o
+
+.PHONY : util/Parser.o
+
+# target to build an object file
+util/Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Parser.cpp.o
+.PHONY : util/Parser.cpp.o
+
+util/Parser.i: util/Parser.cpp.i
+
+.PHONY : util/Parser.i
+
+# target to preprocess a source file
+util/Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Parser.cpp.i
+.PHONY : util/Parser.cpp.i
+
+util/Parser.s: util/Parser.cpp.s
+
+.PHONY : util/Parser.s
+
+# target to generate assembly for a file
+util/Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Parser.cpp.s
+.PHONY : util/Parser.cpp.s
+
+util/RTParser.o: util/RTParser.cpp.o
+
+.PHONY : util/RTParser.o
+
+# target to build an object file
+util/RTParser.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o
+.PHONY : util/RTParser.cpp.o
+
+util/RTParser.i: util/RTParser.cpp.i
+
+.PHONY : util/RTParser.i
+
+# target to preprocess a source file
+util/RTParser.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/RTParser.cpp.i
+.PHONY : util/RTParser.cpp.i
+
+util/RTParser.s: util/RTParser.cpp.s
+
+.PHONY : util/RTParser.s
+
+# target to generate assembly for a file
+util/RTParser.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/RTParser.cpp.s
+.PHONY : util/RTParser.cpp.s
+
 world/LightSource.o: world/LightSource.cpp.o
 
 .PHONY : world/LightSource.o
@@ -291,9 +399,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ray_tracer"
-	@echo "... edit_cache"
 	@echo "... engine/Renderer.o"
 	@echo "... engine/Renderer.i"
 	@echo "... engine/Renderer.s"
@@ -309,6 +417,18 @@ help:
 	@echo "... things/Triangle.o"
 	@echo "... things/Triangle.i"
 	@echo "... things/Triangle.s"
+	@echo "... util/Element.o"
+	@echo "... util/Element.i"
+	@echo "... util/Element.s"
+	@echo "... util/ObjParser.o"
+	@echo "... util/ObjParser.i"
+	@echo "... util/ObjParser.s"
+	@echo "... util/Parser.o"
+	@echo "... util/Parser.i"
+	@echo "... util/Parser.s"
+	@echo "... util/RTParser.o"
+	@echo "... util/RTParser.i"
+	@echo "... util/RTParser.s"
 	@echo "... world/LightSource.o"
 	@echo "... world/LightSource.i"
 	@echo "... world/LightSource.s"

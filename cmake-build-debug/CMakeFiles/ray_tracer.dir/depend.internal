@@ -6,6 +6,9 @@ CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o
  /home/gabriel/Projetos/ray-tracer/engine/Ray.h
  /home/gabriel/Projetos/ray-tracer/engine/Renderer.cpp
  /home/gabriel/Projetos/ray-tracer/engine/Renderer.h
+ /home/gabriel/Projetos/ray-tracer/util/Element.h
+ /home/gabriel/Projetos/ray-tracer/util/Parser.h
+ /home/gabriel/Projetos/ray-tracer/util/RTParser.h
  /home/gabriel/Projetos/ray-tracer/util/text.h
  /home/gabriel/Projetos/ray-tracer/world/LightSource.h
  /home/gabriel/Projetos/ray-tracer/world/Material.h
@@ -19,6 +22,9 @@ CMakeFiles/ray_tracer.dir/main.cpp.o
  /home/gabriel/Projetos/ray-tracer/things/Plane.h
  /home/gabriel/Projetos/ray-tracer/things/Sphere.h
  /home/gabriel/Projetos/ray-tracer/things/Triangle.h
+ /home/gabriel/Projetos/ray-tracer/util/Element.h
+ /home/gabriel/Projetos/ray-tracer/util/Parser.h
+ /home/gabriel/Projetos/ray-tracer/util/RTParser.h
  /home/gabriel/Projetos/ray-tracer/util/text.h
  /home/gabriel/Projetos/ray-tracer/world/LightSource.h
  /home/gabriel/Projetos/ray-tracer/world/Material.h
@@ -47,6 +53,50 @@ CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o
  /home/gabriel/Projetos/ray-tracer/things/Triangle.cpp
  /home/gabriel/Projetos/ray-tracer/things/Triangle.h
  /home/gabriel/Projetos/ray-tracer/util/text.h
+ /home/gabriel/Projetos/ray-tracer/world/Material.h
+ /home/gabriel/Projetos/ray-tracer/world/Thing.h
+CMakeFiles/ray_tracer.dir/util/Element.cpp.o
+ /home/gabriel/Projetos/ray-tracer/engine/Hit.h
+ /home/gabriel/Projetos/ray-tracer/engine/Ray.h
+ /home/gabriel/Projetos/ray-tracer/util/Element.cpp
+ /home/gabriel/Projetos/ray-tracer/util/Element.h
+ /home/gabriel/Projetos/ray-tracer/util/text.h
+ /home/gabriel/Projetos/ray-tracer/world/LightSource.h
+ /home/gabriel/Projetos/ray-tracer/world/Material.h
+ /home/gabriel/Projetos/ray-tracer/world/Thing.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o
+ /home/gabriel/Projetos/ray-tracer/engine/Hit.h
+ /home/gabriel/Projetos/ray-tracer/engine/Ray.h
+ /home/gabriel/Projetos/ray-tracer/util/Element.h
+ /home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp
+ /home/gabriel/Projetos/ray-tracer/util/ObjParser.h
+ /home/gabriel/Projetos/ray-tracer/util/Parser.h
+ /home/gabriel/Projetos/ray-tracer/util/text.h
+ /home/gabriel/Projetos/ray-tracer/world/LightSource.h
+ /home/gabriel/Projetos/ray-tracer/world/Material.h
+ /home/gabriel/Projetos/ray-tracer/world/Thing.h
+CMakeFiles/ray_tracer.dir/util/Parser.cpp.o
+ /home/gabriel/Projetos/ray-tracer/engine/Hit.h
+ /home/gabriel/Projetos/ray-tracer/engine/Ray.h
+ /home/gabriel/Projetos/ray-tracer/util/Element.h
+ /home/gabriel/Projetos/ray-tracer/util/Parser.cpp
+ /home/gabriel/Projetos/ray-tracer/util/Parser.h
+ /home/gabriel/Projetos/ray-tracer/util/text.h
+ /home/gabriel/Projetos/ray-tracer/world/LightSource.h
+ /home/gabriel/Projetos/ray-tracer/world/Material.h
+ /home/gabriel/Projetos/ray-tracer/world/Thing.h
+CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o
+ /home/gabriel/Projetos/ray-tracer/engine/Hit.h
+ /home/gabriel/Projetos/ray-tracer/engine/Ray.h
+ /home/gabriel/Projetos/ray-tracer/things/Plane.h
+ /home/gabriel/Projetos/ray-tracer/things/Sphere.h
+ /home/gabriel/Projetos/ray-tracer/util/Element.h
+ /home/gabriel/Projetos/ray-tracer/util/ObjParser.h
+ /home/gabriel/Projetos/ray-tracer/util/Parser.h
+ /home/gabriel/Projetos/ray-tracer/util/RTParser.cpp
+ /home/gabriel/Projetos/ray-tracer/util/RTParser.h
+ /home/gabriel/Projetos/ray-tracer/util/text.h
+ /home/gabriel/Projetos/ray-tracer/world/LightSource.h
  /home/gabriel/Projetos/ray-tracer/world/Material.h
  /home/gabriel/Projetos/ray-tracer/world/Thing.h
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o
