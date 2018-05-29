@@ -25,6 +25,12 @@ public:
         std::cout << "Mundo criado com cor ambiente " << colorToHex(ambientColor) << std::endl;
     };
 
+    static World from(const std::string &descriptionFilename) {
+        World world;
+        world.fillFrom(descriptionFilename);
+        return world;
+    }
+
     const void fillFrom(const std::string &descriptionFilename) {
         RTParser parser;
 

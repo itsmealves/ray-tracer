@@ -66,6 +66,8 @@ CMakeFiles/ray_tracer.dir/util/Element.cpp.o: ../world/Thing.h
 
 CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../engine/Hit.h
 CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../engine/Ray.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../things/Plane.h
+CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../things/Triangle.h
 CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/Element.h
 CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/ObjParser.cpp
 CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o: ../util/ObjParser.h

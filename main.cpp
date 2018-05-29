@@ -21,8 +21,7 @@ int main(int argc, char *argv[]) {
     int imageWidth = std::stoi(argv[4]);
     int imageHeight = std::stoi(argv[5]);
 
-    World world;
-    world.fillFrom("world.rt");
+    World world = World::from("world.rt");
     Renderer renderer(windowWidth, windowHeight, imageWidth, imageHeight, f);
     renderer.render(world, "out.ppm");
 

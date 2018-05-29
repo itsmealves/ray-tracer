@@ -67,6 +67,8 @@ CMakeFiles/ray_tracer.dir/util/Element.cpp.o
 CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o
  /home/gabriel/Projetos/ray-tracer/engine/Hit.h
  /home/gabriel/Projetos/ray-tracer/engine/Ray.h
+ /home/gabriel/Projetos/ray-tracer/things/Plane.h
+ /home/gabriel/Projetos/ray-tracer/things/Triangle.h
  /home/gabriel/Projetos/ray-tracer/util/Element.h
  /home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp
  /home/gabriel/Projetos/ray-tracer/util/ObjParser.h

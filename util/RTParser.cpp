@@ -8,8 +8,8 @@
 #include "../things/Sphere.h"
 
 const void RTParser::onElementDetection(Element *element) {
-    if (element->isObjFile() && false) {
-        ObjParser parser;
+    if (element->isObjFile()) {
+        ObjParser parser(element->material());
 
         if (parser.parse(element->path())) {
             for (Thing *thing : parser.things()) {
@@ -49,8 +49,8 @@ Element *RTParser::translate(const std::vector<std::string> &spellings) {
                     double r = std::stod(spellings.at(i + 1));
                     unsigned long m = std::stoul(spellings.at(i + 2));
 
-                    arma::vec center = pointList.at(c);
-                    Material material = materialList.at(m);
+                    arma::vec center = pointList.at(c - 1);
+                    Material material = materialList.at(m - 1);
 
                     auto *sphere = new Sphere(material, center, r);
                     return Element::from(sphere);

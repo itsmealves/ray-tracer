@@ -93,6 +93,8 @@ armadillo
 /home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp
 ObjParser.h
 /home/gabriel/Projetos/ray-tracer/util/ObjParser.h
+../things/Triangle.h
+/home/gabriel/Projetos/ray-tracer/things/Triangle.h
 
 /home/gabriel/Projetos/ray-tracer/util/ObjParser.h
 Parser.h

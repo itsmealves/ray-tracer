@@ -3,6 +3,7 @@
 //
 
 #include "ObjParser.h"
+#include "../things/Triangle.h"
 
 
 const void ObjParser::onElementDetection(Element *element) {
@@ -84,8 +85,28 @@ Element *ObjParser::translate(const std::vector<std::string> &spellings) {
     return nullptr;
 }
 
-Thing *ObjParser::translateFace(std::string a, std::string b, std::string c) const {
-    return nullptr;
+Thing *ObjParser::translateFace(const std::string a, const std::string b, const std::string c) const {
+    arma::vec p1 = processFaceToken(a);
+    arma::vec p2 = processFaceToken(b);
+    arma::vec p3 = processFaceToken(c);
+
+    arma::vec v1 = _vList.at((unsigned long) p1.at(0) - 1);
+    arma::vec v2 = _vList.at((unsigned long) p2.at(0) - 1);
+    arma::vec v3 = _vList.at((unsigned long) p3.at(0) - 1);
+
+    return new Triangle(_material, v1, v2, v3);
+}
+
+arma::vec ObjParser::processFaceToken(std::string token) const {
+    std::string s;
+
+    for(char c : token) {
+        if(c == '/') break;
+        s.push_back(c);
+    }
+
+    double v = std::stod(s);
+    return arma::vec({v});
 }
 
 
