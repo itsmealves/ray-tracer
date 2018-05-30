@@ -2,9 +2,10 @@ AmbientColor 100 100 100
 
 Point 0 5 5
 Point 0 0 5
-Point 0 0 15
+Point -15 0 15
 Point 0 -7 0
 Point 0 1 0
+Point 15 0 15
 
 Color 100 100 100
 Color 100 0 100
@@ -18,7 +19,8 @@ LightIntensity 0.3 0.3 0.3
 LightIntensity 0.5 0.4 0.1
 
 Sphere 3 5 1
+Sphere 6 5 1
 Plane 4 5 1
-ObjFile pyramid.obj 2
+ObjFile pyramid.obj 1
 LightSource 1 1
 LightSource 2 2

@@ -14,7 +14,10 @@ private:
     arma::vec _normal;
 public:
     Plane(const Material &material, const arma::vec &point, const arma::vec &normal) :
-            Thing("Plane", material), _point(point), _normal(normal / arma::norm(normal)) {};
+            Thing("Plane", material), _point(point), _normal(normal / arma::norm(normal)) {
+
+        if(_normal.at(2) > 0) _normal = -_normal;
+    }
 
     const arma::vec &point() const {
         return _point;

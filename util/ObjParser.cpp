@@ -89,24 +89,58 @@ Thing *ObjParser::translateFace(const std::string a, const std::string b, const 
     arma::vec p1 = processFaceToken(a);
     arma::vec p2 = processFaceToken(b);
     arma::vec p3 = processFaceToken(c);
+    arma::vec v1, v2, v3, vt1, vt2, vt3, vn1, vn2, vn3;
 
-    arma::vec v1 = _vList.at((unsigned long) p1.at(0) - 1);
-    arma::vec v2 = _vList.at((unsigned long) p2.at(0) - 1);
-    arma::vec v3 = _vList.at((unsigned long) p3.at(0) - 1);
+    bool hasNormalVectors = p1.at(2) > 0.0 && p2.at(2) > 0.0 && p3.at(2) > 0.0;
+    bool hasTextureVectors = p1.at(1) > 0.0 && p2.at(1) > 0.0 && p3.at(1) > 0.0;
 
-    return new Triangle(_material, v1, v2, v3);
+    v1 = _vList.at((unsigned long) p1.at(0) - 1);
+    v2 = _vList.at((unsigned long) p2.at(0) - 1);
+    v3 = _vList.at((unsigned long) p3.at(0) - 1);
+
+    if(hasTextureVectors) {
+        vt1 = _vtList.at((unsigned long) p1.at(1) - 1);
+        vt2 = _vtList.at((unsigned long) p2.at(1) - 1);
+        vt3 = _vtList.at((unsigned long) p3.at(1) - 1);
+    }
+
+    if(hasNormalVectors) {
+        vn1 = _vnList.at((unsigned long) p1.at(2) - 1);
+        vn2 = _vnList.at((unsigned long) p2.at(2) - 1);
+        vn3 = _vnList.at((unsigned long) p3.at(2) - 1);
+    }
+
+    if(!hasNormalVectors && !hasTextureVectors)
+        return new Triangle(_material, v1, v2, v3);
+    else if(hasNormalVectors && !hasTextureVectors)
+        return new Triangle(_material, v1, v2, v3, vn1, vn2, vn3);
+    else
+        return nullptr;
 }
 
 arma::vec ObjParser::processFaceToken(std::string token) const {
+    int state = 0;
     std::string s;
+    std::string t;
+    std::string u;
 
     for(char c : token) {
-        if(c == '/') break;
-        s.push_back(c);
+        if(c == '/') {
+            state += 1;
+            continue;
+        }
+
+        if(state == 0) s.push_back(c);
+        else if(state == 1) t.push_back(c);
+        else if(state == 2) u.push_back(c);
+        else break;
     }
 
     double v = std::stod(s);
-    return arma::vec({v});
+    double vt = t.empty()? 0.0 : std::stod(t);
+    double vn = u.empty()? 0.0 : std::stod(u);
+
+    return arma::vec({v, vt, vn});
 }
 
 

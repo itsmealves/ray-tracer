@@ -22,10 +22,27 @@ const Hit Triangle::intersectedBy(const Ray &ray) const {
             double t = tn / d;
 
             if(t >= 0 && s + t <= 1) {
-                return planeHit;
+                return Hit(planeHit.material(), normalTo(planeHit.hitPoint()), planeHit.hitPoint());
             }
         }
     }
 
     return Hit();
+}
+
+double distance(arma::vec a, arma::vec b) {
+    arma::vec terms = arma::pow(a - b, 2);
+    double squaredDistance = arma::dot(terms, arma::vec({1,1,1}));
+    return std::sqrt(squaredDistance);
+}
+
+const arma::vec Triangle::calculateNormalTo(const arma::vec &point) const {
+    double d1 = distance(point, _v1);
+    double d2 = distance(point, _v2);
+    double d3 = distance(point, _v3);
+
+    arma::vec normal = (d1 * _vn1 + d2 * _vn2 + d3 * _vn3) / (d1 + d2 + d3);
+    normal = normal / arma::norm(normal);
+
+    return normal;
 }

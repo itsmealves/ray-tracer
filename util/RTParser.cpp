@@ -13,6 +13,7 @@ const void RTParser::onElementDetection(Element *element) {
 
         if (parser.parse(element->path())) {
             for (Thing *thing : parser.things()) {
+
                 addThing(thing);
             }
         }
