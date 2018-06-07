@@ -21,6 +21,12 @@ private:
 public:
     World() : World(arma::vec({0, 0, 0})) {}
 
+    ~World() {
+        for(Thing *t : things()) {
+            delete t;
+        }
+    }
+
     explicit World(const arma::vec &ambientColor) : _ambientColor(ambientColor) {
         std::cout << "Mundo criado com cor ambiente " << colorToHex(ambientColor) << std::endl;
     };

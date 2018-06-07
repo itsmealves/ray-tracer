@@ -25,8 +25,8 @@ class Triangle : public Thing {
         Triangle(const Material &material, const arma::vec &v1, const arma::vec &v2, const arma::vec &v3) :
                 Thing("Triangle", material), _v1(v1), _v2(v2), _v3(v3), _plane(Plane(material, v1, arma::cross(v2 - v1, v3 - v1))) {};
         Triangle(const Material &material, const arma::vec &v1, const arma::vec &v2, const arma::vec &v3, const arma::vec &vn1, const arma::vec &vn2, const arma::vec &vn3) :
-                Thing("Triangle", material), _v1(v1 / arma::norm(v1)), _v2(v2 / arma::norm(v2)), _v3(v3 / arma::norm(v3)),
-                _plane(Plane(material, v1, arma::cross(v2 - v1, v3 - v1))), _usePlaneNormal(false), _vn1(vn1), _vn2(vn2), _vn3(vn3) {};
+                Thing("Triangle", material), _v1(v1), _v2(v2), _v3(v3), _plane(Plane(material, v1, arma::cross(v2 - v1, v3 - v1))),
+                _usePlaneNormal(false), _vn1(vn1), _vn2(vn2), _vn3(vn3) {};
 
         const arma::vec &v1() const {
             return _v1;
