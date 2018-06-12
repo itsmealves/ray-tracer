@@ -41,72 +41,69 @@ const void Renderer::render(const World &world, const std::string &filePath) con
 
     std::ofstream file;
     file.open(filePath);
-
     file << "P3" << std::endl;
     file << _width << " " << _height << std::endl;
     file << "255" << std::endl;
 
-
     for(int j = 0; j < _height; j++) {
         for(int i = 0; i < _width; i++) {
-            Hit hit = Hit();
+            const int recursionLimit = 3;
+            Ray ray = shoot(arma::vec({(double) i, (double) j, 1}));
+            arma::vec color = trace(ray, world, recursionLimit) + world.ambientColor();
 
-            arma::vec color = world.ambientColor();
-            arma::vec currentPoint = arma::vec({(double) i, (double) j, 1});
-            Ray ray = shoot(currentPoint);
-
-            for(unsigned long k = 0; k < world.things().size(); k++) {
-                Thing *t = world.things().at(k);
-                Hit currentHit = t->intersectedBy(ray);
-
-                if((!hit.happened() && currentHit.happened()) || currentHit < hit) {
-                    hit = currentHit;
-                }
-            }
-
-            if(hit.happened()) {
-                arma::vec resultColor({0, 0, 0});
-
-                for(unsigned long k = 0; k < world.lightSources().size(); k++) {
-                    Material material = hit.material();
-                    LightSource l = world.lightSources().at(k);
-                    Ray lightRay = l.lightRayTo(hit.hitPoint());
-
-                    double lambertCosine = arma::dot(hit.normal(), lightRay.direction());
-                    double lambertComponent = lambertCosine > 0.0? lambertCosine : 0.0;
-                    arma::vec lambert = (material.diffuseColor() % l.intensity()) * lambertComponent;
-                    arma::vec phong({0, 0, 0});
-
-
-                    if(!material.isLambertian()) {
-                        arma::vec h = /*ray.direction() + */lightRay.direction();
-                        arma::vec hNorm = h / arma::norm(h);
-
-                        double phongCosine = arma::dot(hit.normal(), hNorm);
-                        double phongComponent = phongCosine > 0.0? std::pow(phongCosine, material.shineness()) : 0.0;
-                        phong = (material.specularColor() % l.intensity()) * phongComponent;
-                    }
-
-                    resultColor += lambert + phong;
-                }
-
-                resultColor(0) = resultColor.at(0) > 255.0? 255.0 : resultColor.at(0);
-                resultColor(1) = resultColor.at(1) > 255.0? 255.0 : resultColor.at(1);
-                resultColor(2) = resultColor.at(2) > 255.0? 255.0 : resultColor.at(2);
-
-                color += resultColor;
-            }
-
-            file << std::round(color.at(0)) << " " << std::round(color.at(1)) << " " << std::round(color.at(2)) << " ";
+            file << std::round(color.at(0) > 255.0? 255.0 : color.at(0)) << " ";
+            file << std::round(color.at(1) > 255.0? 255.0 : color.at(1)) << " ";
+            file << std::round(color.at(2) > 255.0? 255.0 : color.at(2)) << " ";
         }
 
         file << std::endl;
     }
 
-
     file.close();
-
     std::cout << "Imagem " << filePath << " pronta." << std::endl;
 }
 
+const arma::vec trace(const Ray &ray, const World &world, const int recursionLimit) const {
+    Hit hit();
+    arma::vec color({0, 0, 0});
 
+    for(Thing *t : world.things()) {
+        Hit currentHit = t->intersectedBy(ray);
+        if((!hit.happened() && currentHit.happened()) || currentHit < hit)
+            hit = currentHit;
+    }
+
+    if(hit.happened()) {
+        arma::vec resultColor({0, 0, 0});
+
+        for(LightSource lightSource : world.lightSources()) {
+            resultColor += illuminate(hit, lightSource);
+        }
+
+        color += resultColor;
+    }
+
+    return color;
+}
+
+const arma::vec illuminate(const Hit &hit, const LightSource &lightSource) const {
+    Material material = hit.material();
+    Ray lightRay = l.lightRayTo(hit.hitPoint());
+
+    double lambertCosine = arma::dot(hit.normal(), lightRay.direction());
+    double lambertComponent = lambertCosine > 0.0? lambertCosine : 0.0;
+    arma::vec lambert = (material.diffuseColor() % l.intensity()) * lambertComponent;
+
+    if(!material.isLambertian()) {
+        arma::vec h = /*ray.direction() + */lightRay.direction();
+        arma::vec hNorm = h / arma::norm(h);
+
+        double phongCosine = arma::dot(hit.normal(), hNorm);
+        double phongComponent = phongCosine > 0.0? std::pow(phongCosine, material.shineness()) : 0.0;
+        arma::vec phong = (material.specularColor() % l.intensity()) * phongComponent;
+
+        return lambert + phong;
+    }
+
+    return lambert;
+}

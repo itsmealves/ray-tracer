@@ -1,3 +1,0 @@
-/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir

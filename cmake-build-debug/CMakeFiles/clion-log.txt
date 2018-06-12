@@ -1,4 +1,25 @@
-/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gabriel/Projetos/ray-tracer
--- Configuring done
--- Generating done
--- Build files have been written to: /home/gabriel/Projetos/ray-tracer/cmake-build-debug
+/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gabriel/Documentos/ray-tracer
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake:137 (message):
+  Could NOT find Armadillo (missing: ARMADILLO_LIBRARY ARMADILLO_INCLUDE_DIR)
+Call Stack (most recent call first):
+  /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake:378 (_FPHSA_FAILURE_MESSAGE)
+  /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/share/cmake-3.10/Modules/FindArmadillo.cmake:77 (find_package_handle_standard_args)
+  CMakeLists.txt:4 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/gabriel/Documentos/ray-tracer/cmake-build-debug/CMakeFiles/CMakeOutput.log".
