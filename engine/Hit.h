@@ -10,14 +10,15 @@
 
 class Hit {
 private:
+    double _t;
     bool _happened;
     arma::vec _normal;
     arma::vec _hitPoint;
     Material _material;
 public:
     Hit() : _happened(false) {};
-    Hit(const Material &material, const arma::vec &normal, const arma::vec &hitPoint) :
-            _happened(true), _material(material), _normal(normal), _hitPoint(hitPoint) {};
+    Hit(const Material &material, const arma::vec &normal, const arma::vec &hitPoint, const double t) :
+            _happened(true), _material(material), _normal(normal), _hitPoint(hitPoint), _t(t) {};
 
     const Material &material() const {
         return _material;
@@ -35,13 +36,8 @@ public:
         return _happened;
     }
 
-    const bool operator<(const Hit &hit) const {
-        if(happened() && hit.happened()) return hitPoint().at(2) < hit.hitPoint().at(2);
-        else return false;
-    }
-
-    bool operator>(const Hit &hit) const {
-        return hit < *this;
+    const double t() const {
+        return _t;
     }
 };
 

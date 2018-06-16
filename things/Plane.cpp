@@ -10,7 +10,7 @@ const Hit Plane::intersectedBy(const Ray &ray) const {
 
     if(denominator != 0) {
         double r = numerator / denominator;
-        if(r >= 0) return Hit(material(), _normal, ray.point() + ray.direction() * r);
+        if(r >= 0) return Hit(material(), _normal, ray.point() + ray.direction() * r, r);
     }
 
     return Hit();

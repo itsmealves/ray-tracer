@@ -127,17 +127,18 @@ Element *RTParser::translate(const std::vector<std::string> &spellings) {
 
                 break;
             case 61:
-                if(spellings.size() < i + 3) {
+                if(spellings.size() < i + 4) {
                     state = -1;
                 } else {
                     unsigned long d = std::stoul(spellings.at(i + 0));
                     unsigned long c = std::stoul(spellings.at(i + 1));
                     double s = std::stod(spellings.at(i + 2));
+                    double r = std::stod(spellings.at(i + 3));
 
                     arma::vec diffuse = colorList.at(d - 1);
                     arma::vec specular = colorList.at(c - 1);
 
-                    Material material(diffuse, specular, s);
+                    Material material(diffuse, specular, s, r);
                     materialList.emplace_back(material);
                 }
 

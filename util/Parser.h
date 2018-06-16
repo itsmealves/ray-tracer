@@ -49,7 +49,6 @@ private:
 
 protected:
     const int _materialSize = 7;
-    Material parseMaterial(std::vector<std::string> spellings, unsigned long start) const;
 
     void insertElement(Element *element) {
         if(element->isThing())

@@ -15,7 +15,6 @@ private:
     int _height;
     arma::mat _kInv;
     const Ray shoot(const arma::vec &point) const;
-    const arma::vec illuminate(const Hit &hit, const LightSource &lightSource) const;
     const arma::vec trace(const Ray &ray, const World &world, const int recursionLimit) const;
 public:
     Renderer(int windowWidth, int windowHeight, int imageWidth, int imageHeight, double f);

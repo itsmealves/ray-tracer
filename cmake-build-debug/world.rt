@@ -1,26 +1,25 @@
-AmbientColor 100 100 100
+AmbientColor 50 50 50
 
-Point 0 5 5
-Point 0 0 5
+Point -15 10 15
+Point 15 10 15
 Point -15 0 15
-Point 0 -7 0
+Point 0 -5 0
 Point 0 1 0
 Point 15 0 15
 
 Color 100 100 100
-Color 100 0 100
-Color 150 150 150
-Color 150 0 150
+Color 20 50 100
+Color 100 100 100
+Color 0 10 100
 
-Material 1 3 4
-Material 2 4 4
+Material 1 3 20 0.2
+Material 1 3 20 0.2
+Material 2 4 20 0.0
 
-LightIntensity 0.3 0.3 0.3
-LightIntensity 0.5 0.4 0.1
+LightIntensity 0.4 0.1 0.6
 
 Sphere 3 5 1
-Sphere 6 5 1
-Plane 4 5 1
-ObjFile pyramid.obj 1
+Sphere 6 5 2
+Plane 4 5 3
 LightSource 1 1
-LightSource 2 2
+LightSource 2 1

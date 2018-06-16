@@ -17,7 +17,7 @@ const Hit Sphere::intersectedBy(const Ray &ray) const {
     double t = t1 < t2? t1 : t2;
 
     arma::vec intersection = ray.point() + (ray.direction() * t);
-    return Hit(material(), normalTo(intersection), intersection);
+    return Hit(material(), normalTo(intersection), intersection, t);
 }
 
 

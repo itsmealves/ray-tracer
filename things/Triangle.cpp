@@ -26,7 +26,7 @@ const Hit Triangle::intersectedBy(const Ray &ray) const {
                 arma::vec normal = normalTo(planeHit.normal());
                 arma::vec hitPoint = planeHit.hitPoint();
 
-                return Hit(material, normal, hitPoint);
+                return Hit(material, normal, hitPoint, planeHit.t());
             }
         }
     }
