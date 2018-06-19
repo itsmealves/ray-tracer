@@ -48,7 +48,7 @@ const void Renderer::render(const World &world, const std::string &filePath) con
     for(int j = 0; j < _height; j++) {
         for(int i = 0; i < _width; i++) {
             const int recursionLimit = 2;
-            Ray ray = shoot(arma::vec({(double) i, (double) j, 1}));
+            Ray ray = shoot(arma::vec({(double) i, (double) j, 1.0}));
             arma::vec color = trace(ray, world, recursionLimit) + world.ambientColor();
 
             file << std::round(color.at(0) > 255.0? 255.0 : color.at(0)) << " ";
@@ -71,7 +71,7 @@ const arma::vec Renderer::trace(const Ray &ray, const World &world, const int re
     for(Thing *t : world.things()) {
         Hit currentHit = t->intersectedBy(ray);
         if(!currentHit.happened()) continue;
-        if(currentHit.t() <= 0.001) continue;
+        if(currentHit.t() <= 0) continue;
 
         if(!hit.happened() || hit.t() > currentHit.t()) {
             hit = currentHit;
@@ -82,13 +82,14 @@ const arma::vec Renderer::trace(const Ray &ray, const World &world, const int re
         arma::vec resultColor({0, 0, 0});
 
         for(const LightSource &lightSource : world.lightSources()) {
+            double tLightSource = 0;
             bool lightDisabled = false;
             const Material &material = hit.material();
-            Ray lightRay = lightSource.lightRayTo(hit.hitPoint());
+            Ray lightRay = lightSource.lightRayTo(hit.hitPoint(), &tLightSource);
 
             for(Thing *t : world.things()) {
                 Hit shadowTest = t->intersectedBy(lightRay);
-                if(shadowTest.happened() && shadowTest.t() > 0.001) {
+                if(shadowTest.happened() && shadowTest.t() > 0.001 && shadowTest.t() < tLightSource) {
                     lightDisabled = true;
                     break;
                 }

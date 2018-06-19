@@ -13,32 +13,21 @@
   <component name="ChangeListManager">
     <list default="true" id="72e8c0b8-57f4-490f-930f-335e2d9f5e6a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/Parser.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/Parser.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/out.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/out.ppm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ray_tracer" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ray_tracer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ray_tracer.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ray_tracer.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/world.rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/world.rt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/Hit.h" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Hit.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/Renderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Renderer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/things/Plane.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/things/Plane.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/things/Sphere.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/things/Sphere.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/things/Triangle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/things/Triangle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/util/Parser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Parser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/RTParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/util/RTParser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/things/Sphere.h" beforeDir="false" afterPath="$PROJECT_DIR$/things/Sphere.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/world/LightSource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/world/LightSource.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/Material.h" beforeDir="false" afterPath="$PROJECT_DIR$/world/Material.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/world/LightSource.h" beforeDir="false" afterPath="$PROJECT_DIR$/world/LightSource.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +43,8 @@
       <file leaf-file-name="Renderer.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/engine/Renderer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+            <state relative-caret-position="385">
+              <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -63,8 +52,17 @@
       <file leaf-file-name="LightSource.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/world/LightSource.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="176">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LightSource.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/world/LightSource.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -72,8 +70,17 @@
       <file leaf-file-name="Sphere.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/things/Sphere.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="374">
+              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sphere.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/things/Sphere.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -87,19 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/Parser.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Hit.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/Hit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
+            <state relative-caret-position="880">
               <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
             </state>
           </provider>
@@ -108,8 +106,17 @@
       <file leaf-file-name="world.rt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/world.rt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+            <state relative-caret-position="95">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RTParser.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/RTParser.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="141" column="56" lean-forward="true" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -117,7 +124,7 @@
       <file leaf-file-name="Renderer.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/Renderer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="352">
               <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
             </state>
           </provider>
@@ -137,8 +144,6 @@
         <option value="$PROJECT_DIR$/world/World.cpp" />
         <option value="$PROJECT_DIR$/engine/Ray.h" />
         <option value="$PROJECT_DIR$/util/text.h" />
-        <option value="$PROJECT_DIR$/things/Sphere.h" />
-        <option value="$PROJECT_DIR$/world/LightSource.h" />
         <option value="$PROJECT_DIR$/world/Thing.h" />
         <option value="$PROJECT_DIR$/util/Element.h" />
         <option value="$PROJECT_DIR$/util/RTParser.h" />
@@ -155,12 +160,14 @@
         <option value="$PROJECT_DIR$/util/Parser.cpp" />
         <option value="$PROJECT_DIR$/util/Parser.h" />
         <option value="$PROJECT_DIR$/things/Plane.cpp" />
-        <option value="$PROJECT_DIR$/things/Sphere.cpp" />
         <option value="$PROJECT_DIR$/things/Triangle.cpp" />
         <option value="$PROJECT_DIR$/engine/Hit.h" />
-        <option value="$PROJECT_DIR$/engine/Renderer.cpp" />
-        <option value="$PROJECT_DIR$/cmake-build-debug/world.rt" />
+        <option value="$PROJECT_DIR$/world/LightSource.h" />
+        <option value="$PROJECT_DIR$/things/Sphere.h" />
+        <option value="$PROJECT_DIR$/things/Sphere.cpp" />
         <option value="$PROJECT_DIR$/world/LightSource.cpp" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/world.rt" />
+        <option value="$PROJECT_DIR$/engine/Renderer.cpp" />
       </list>
     </option>
   </component>
@@ -185,7 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,6 +228,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,12 +281,14 @@
       <workItem from="1528821661629" duration="573000" />
       <workItem from="1528852607669" duration="367000" />
       <workItem from="1529030418103" duration="4700000" />
-      <workItem from="1529113103138" duration="9486000" />
+      <workItem from="1529113103138" duration="9924000" />
+      <workItem from="1529182413944" duration="7999000" />
+      <workItem from="1529368173647" duration="1878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81948000" />
+    <option name="totallyTimeSpent" value="92263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="33" width="1920" height="1047" extended-state="6" />
@@ -314,7 +323,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="73" />
+      <option name="time" value="89" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -497,13 +506,6 @@
     <entry file="file://$PROJECT_DIR$/util/Element.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/world/LightSource.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="87" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/Element.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1562">
@@ -568,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/RTParser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/RTParser.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -617,20 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/things/Sphere.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/things/Sphere.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/things/Plane.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -640,36 +621,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/Renderer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="352">
           <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/Hit.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
+        <state relative-caret-position="880">
           <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/world.rt">
+    <entry file="file://$PROJECT_DIR$/things/Sphere.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <state relative-caret-position="594">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/world/LightSource.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/things/Sphere.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/world/LightSource.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="176">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/RTParser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="141" column="56" lean-forward="true" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/world.rt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/Renderer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+        <state relative-caret-position="385">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -17,7 +17,7 @@ public:
     LightSource() : _position(arma::vec({0, 0, 0})), _intensity(arma::vec({0, 0, 0})) {}
     LightSource(const arma::vec &position, const arma::vec &intensity) : _position(position), _intensity(intensity) {}
 
-    const Ray lightRayTo(const arma::vec &point) const;
+    const Ray lightRayTo(const arma::vec &point, double *t) const;
 
     const arma::vec &position() const {
         return _position;

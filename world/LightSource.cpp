@@ -4,7 +4,8 @@
 
 #include "LightSource.h"
 
-const Ray LightSource::lightRayTo(const arma::vec &point) const {
+const Ray LightSource::lightRayTo(const arma::vec &point, double *t) const {
     arma::vec direction = _position - point;
-    return Ray(point, direction / arma::norm(direction));
+    *t = arma::norm(direction);
+    return Ray(point, direction / *t);
 }

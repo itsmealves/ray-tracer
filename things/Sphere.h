@@ -25,8 +25,7 @@ public:
     };
 
     const arma::vec normalTo(const arma::vec &point) const override {
-        arma::vec normal = point - _center;
-        return normal / arma::norm(normal);
+        return (point - _center) / r();
     };
 
     const Hit intersectedBy(const Ray &ray) const override;
