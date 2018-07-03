@@ -20,6 +20,18 @@ public:
         return _center;
     };
 
+    const arma::vec massCenter() const override {
+        return _center;
+    }
+
+    const arma::vec minBounds() const override {
+        return center() - arma::ones(3) * r();
+    }
+
+    const arma::vec maxBounds() const override {
+        return center() + arma::ones(3) * r();
+    }
+
     const double r() const {
         return _r;
     };

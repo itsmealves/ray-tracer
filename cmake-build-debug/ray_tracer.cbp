@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/box/AABB.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/box/AABB.h">
+			<Option target="ray_tracer"/>
+		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/engine/Hit.h">
 			<Option target="ray_tracer"/>
 		</Unit>
@@ -95,6 +101,30 @@
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/main.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/Element.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/Element.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/ObjParser.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/ObjParser.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/Parser.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/Parser.h">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/RTParser.cpp">
+			<Option target="ray_tracer"/>
+		</Unit>
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/parser/RTParser.h">
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Plane.cpp">
@@ -115,28 +145,25 @@
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/things/Triangle.h">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Element.cpp">
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/tree/KDTree.cpp">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Element.h">
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/tree/KDTree.h">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/ObjParser.cpp">
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/tree/Node.cpp">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/ObjParser.h">
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/tree/Node.h">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Parser.cpp">
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Globals.cpp">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Parser.h">
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Globals.h">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/RTParser.cpp">
-			<Option target="ray_tracer"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/RTParser.h">
+		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/MissingMethods.h">
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/text.h">

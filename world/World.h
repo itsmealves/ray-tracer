@@ -11,7 +11,7 @@
 #include "LightSource.h"
 #include "Thing.h"
 #include "../util/text.h"
-#include "../util/RTParser.h"
+#include "../parser/RTParser.h"
 
 class World {
 private:

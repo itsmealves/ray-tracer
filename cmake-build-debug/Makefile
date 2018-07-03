@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
+RM = /home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/gabriel/Projetos/ray-tracer/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/gabriel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -122,6 +122,33 @@ ray_tracer: cmake_check_build_system
 ray_tracer/fast:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/build
 .PHONY : ray_tracer/fast
+
+box/AABB.o: box/AABB.cpp.o
+
+.PHONY : box/AABB.o
+
+# target to build an object file
+box/AABB.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/box/AABB.cpp.o
+.PHONY : box/AABB.cpp.o
+
+box/AABB.i: box/AABB.cpp.i
+
+.PHONY : box/AABB.i
+
+# target to preprocess a source file
+box/AABB.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/box/AABB.cpp.i
+.PHONY : box/AABB.cpp.i
+
+box/AABB.s: box/AABB.cpp.s
+
+.PHONY : box/AABB.s
+
+# target to generate assembly for a file
+box/AABB.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/box/AABB.cpp.s
+.PHONY : box/AABB.cpp.s
 
 engine/Renderer.o: engine/Renderer.cpp.o
 
@@ -176,6 +203,114 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+parser/Element.o: parser/Element.cpp.o
+
+.PHONY : parser/Element.o
+
+# target to build an object file
+parser/Element.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/Element.cpp.o
+.PHONY : parser/Element.cpp.o
+
+parser/Element.i: parser/Element.cpp.i
+
+.PHONY : parser/Element.i
+
+# target to preprocess a source file
+parser/Element.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/Element.cpp.i
+.PHONY : parser/Element.cpp.i
+
+parser/Element.s: parser/Element.cpp.s
+
+.PHONY : parser/Element.s
+
+# target to generate assembly for a file
+parser/Element.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/Element.cpp.s
+.PHONY : parser/Element.cpp.s
+
+parser/ObjParser.o: parser/ObjParser.cpp.o
+
+.PHONY : parser/ObjParser.o
+
+# target to build an object file
+parser/ObjParser.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/ObjParser.cpp.o
+.PHONY : parser/ObjParser.cpp.o
+
+parser/ObjParser.i: parser/ObjParser.cpp.i
+
+.PHONY : parser/ObjParser.i
+
+# target to preprocess a source file
+parser/ObjParser.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/ObjParser.cpp.i
+.PHONY : parser/ObjParser.cpp.i
+
+parser/ObjParser.s: parser/ObjParser.cpp.s
+
+.PHONY : parser/ObjParser.s
+
+# target to generate assembly for a file
+parser/ObjParser.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/ObjParser.cpp.s
+.PHONY : parser/ObjParser.cpp.s
+
+parser/Parser.o: parser/Parser.cpp.o
+
+.PHONY : parser/Parser.o
+
+# target to build an object file
+parser/Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/Parser.cpp.o
+.PHONY : parser/Parser.cpp.o
+
+parser/Parser.i: parser/Parser.cpp.i
+
+.PHONY : parser/Parser.i
+
+# target to preprocess a source file
+parser/Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/Parser.cpp.i
+.PHONY : parser/Parser.cpp.i
+
+parser/Parser.s: parser/Parser.cpp.s
+
+.PHONY : parser/Parser.s
+
+# target to generate assembly for a file
+parser/Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/Parser.cpp.s
+.PHONY : parser/Parser.cpp.s
+
+parser/RTParser.o: parser/RTParser.cpp.o
+
+.PHONY : parser/RTParser.o
+
+# target to build an object file
+parser/RTParser.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/RTParser.cpp.o
+.PHONY : parser/RTParser.cpp.o
+
+parser/RTParser.i: parser/RTParser.cpp.i
+
+.PHONY : parser/RTParser.i
+
+# target to preprocess a source file
+parser/RTParser.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/RTParser.cpp.i
+.PHONY : parser/RTParser.cpp.i
+
+parser/RTParser.s: parser/RTParser.cpp.s
+
+.PHONY : parser/RTParser.s
+
+# target to generate assembly for a file
+parser/RTParser.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/parser/RTParser.cpp.s
+.PHONY : parser/RTParser.cpp.s
 
 things/Plane.o: things/Plane.cpp.o
 
@@ -258,113 +393,86 @@ things/Triangle.cpp.s:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/things/Triangle.cpp.s
 .PHONY : things/Triangle.cpp.s
 
-util/Element.o: util/Element.cpp.o
+tree/KDTree.o: tree/KDTree.cpp.o
 
-.PHONY : util/Element.o
-
-# target to build an object file
-util/Element.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Element.cpp.o
-.PHONY : util/Element.cpp.o
-
-util/Element.i: util/Element.cpp.i
-
-.PHONY : util/Element.i
-
-# target to preprocess a source file
-util/Element.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Element.cpp.i
-.PHONY : util/Element.cpp.i
-
-util/Element.s: util/Element.cpp.s
-
-.PHONY : util/Element.s
-
-# target to generate assembly for a file
-util/Element.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Element.cpp.s
-.PHONY : util/Element.cpp.s
-
-util/ObjParser.o: util/ObjParser.cpp.o
-
-.PHONY : util/ObjParser.o
+.PHONY : tree/KDTree.o
 
 # target to build an object file
-util/ObjParser.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.o
-.PHONY : util/ObjParser.cpp.o
+tree/KDTree.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o
+.PHONY : tree/KDTree.cpp.o
 
-util/ObjParser.i: util/ObjParser.cpp.i
+tree/KDTree.i: tree/KDTree.cpp.i
 
-.PHONY : util/ObjParser.i
+.PHONY : tree/KDTree.i
 
 # target to preprocess a source file
-util/ObjParser.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.i
-.PHONY : util/ObjParser.cpp.i
+tree/KDTree.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.i
+.PHONY : tree/KDTree.cpp.i
 
-util/ObjParser.s: util/ObjParser.cpp.s
+tree/KDTree.s: tree/KDTree.cpp.s
 
-.PHONY : util/ObjParser.s
+.PHONY : tree/KDTree.s
 
 # target to generate assembly for a file
-util/ObjParser.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/ObjParser.cpp.s
-.PHONY : util/ObjParser.cpp.s
+tree/KDTree.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.s
+.PHONY : tree/KDTree.cpp.s
 
-util/Parser.o: util/Parser.cpp.o
+tree/Node.o: tree/Node.cpp.o
 
-.PHONY : util/Parser.o
+.PHONY : tree/Node.o
 
 # target to build an object file
-util/Parser.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Parser.cpp.o
-.PHONY : util/Parser.cpp.o
+tree/Node.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/Node.cpp.o
+.PHONY : tree/Node.cpp.o
 
-util/Parser.i: util/Parser.cpp.i
+tree/Node.i: tree/Node.cpp.i
 
-.PHONY : util/Parser.i
+.PHONY : tree/Node.i
 
 # target to preprocess a source file
-util/Parser.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Parser.cpp.i
-.PHONY : util/Parser.cpp.i
+tree/Node.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/Node.cpp.i
+.PHONY : tree/Node.cpp.i
 
-util/Parser.s: util/Parser.cpp.s
+tree/Node.s: tree/Node.cpp.s
 
-.PHONY : util/Parser.s
+.PHONY : tree/Node.s
 
 # target to generate assembly for a file
-util/Parser.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Parser.cpp.s
-.PHONY : util/Parser.cpp.s
+tree/Node.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/Node.cpp.s
+.PHONY : tree/Node.cpp.s
 
-util/RTParser.o: util/RTParser.cpp.o
+util/Globals.o: util/Globals.cpp.o
 
-.PHONY : util/RTParser.o
+.PHONY : util/Globals.o
 
 # target to build an object file
-util/RTParser.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/RTParser.cpp.o
-.PHONY : util/RTParser.cpp.o
+util/Globals.cpp.o:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Globals.cpp.o
+.PHONY : util/Globals.cpp.o
 
-util/RTParser.i: util/RTParser.cpp.i
+util/Globals.i: util/Globals.cpp.i
 
-.PHONY : util/RTParser.i
+.PHONY : util/Globals.i
 
 # target to preprocess a source file
-util/RTParser.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/RTParser.cpp.i
-.PHONY : util/RTParser.cpp.i
+util/Globals.cpp.i:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Globals.cpp.i
+.PHONY : util/Globals.cpp.i
 
-util/RTParser.s: util/RTParser.cpp.s
+util/Globals.s: util/Globals.cpp.s
 
-.PHONY : util/RTParser.s
+.PHONY : util/Globals.s
 
 # target to generate assembly for a file
-util/RTParser.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/RTParser.cpp.s
-.PHONY : util/RTParser.cpp.s
+util/Globals.cpp.s:
+	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Globals.cpp.s
+.PHONY : util/Globals.cpp.s
 
 world/LightSource.o: world/LightSource.cpp.o
 
@@ -402,12 +510,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ray_tracer"
+	@echo "... box/AABB.o"
+	@echo "... box/AABB.i"
+	@echo "... box/AABB.s"
 	@echo "... engine/Renderer.o"
 	@echo "... engine/Renderer.i"
 	@echo "... engine/Renderer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parser/Element.o"
+	@echo "... parser/Element.i"
+	@echo "... parser/Element.s"
+	@echo "... parser/ObjParser.o"
+	@echo "... parser/ObjParser.i"
+	@echo "... parser/ObjParser.s"
+	@echo "... parser/Parser.o"
+	@echo "... parser/Parser.i"
+	@echo "... parser/Parser.s"
+	@echo "... parser/RTParser.o"
+	@echo "... parser/RTParser.i"
+	@echo "... parser/RTParser.s"
 	@echo "... things/Plane.o"
 	@echo "... things/Plane.i"
 	@echo "... things/Plane.s"
@@ -417,18 +540,15 @@ help:
 	@echo "... things/Triangle.o"
 	@echo "... things/Triangle.i"
 	@echo "... things/Triangle.s"
-	@echo "... util/Element.o"
-	@echo "... util/Element.i"
-	@echo "... util/Element.s"
-	@echo "... util/ObjParser.o"
-	@echo "... util/ObjParser.i"
-	@echo "... util/ObjParser.s"
-	@echo "... util/Parser.o"
-	@echo "... util/Parser.i"
-	@echo "... util/Parser.s"
-	@echo "... util/RTParser.o"
-	@echo "... util/RTParser.i"
-	@echo "... util/RTParser.s"
+	@echo "... tree/KDTree.o"
+	@echo "... tree/KDTree.i"
+	@echo "... tree/KDTree.s"
+	@echo "... tree/Node.o"
+	@echo "... tree/Node.i"
+	@echo "... tree/Node.s"
+	@echo "... util/Globals.o"
+	@echo "... util/Globals.i"
+	@echo "... util/Globals.s"
 	@echo "... world/LightSource.o"
 	@echo "... world/LightSource.i"
 	@echo "... world/LightSource.s"

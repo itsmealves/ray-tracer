@@ -29,6 +29,18 @@ public:
 
     const Hit intersectedBy(const Ray &ray) const override;
 
+    const arma::vec massCenter() const override {
+        return arma::vec({NAN, NAN, NAN});
+    }
+
+    const arma::vec minBounds() const override {
+        return massCenter();
+    }
+
+    const arma::vec maxBounds() const override {
+        return massCenter();
+    }
+
     const std::string getInfo() const override {
         std::stringstream stream;
 

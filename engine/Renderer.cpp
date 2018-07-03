@@ -3,6 +3,7 @@
 //
 
 #include "Renderer.h"
+#include "../tree/KDTree.h"
 
 Renderer::Renderer(int windowWidth, int windowHeight, int imageWidth, int imageHeight, double f) {
     double fx = ((double) imageWidth) / ((double) windowWidth) * f;
@@ -45,11 +46,14 @@ const void Renderer::render(const World &world, const std::string &filePath) con
     file << _width << " " << _height << std::endl;
     file << "255" << std::endl;
 
+    KDTree tree;
+    tree.insert(world.things());
+
     for(int j = 0; j < _height; j++) {
         for(int i = 0; i < _width; i++) {
             const int recursionLimit = 2;
             Ray ray = shoot(arma::vec({(double) i, (double) j, 1.0}));
-            arma::vec color = trace(ray, world, recursionLimit) + world.ambientColor();
+            arma::vec color = trace(ray, tree, world, recursionLimit) + world.ambientColor();
 
             file << std::round(color.at(0) > 255.0? 255.0 : color.at(0)) << " ";
             file << std::round(color.at(1) > 255.0? 255.0 : color.at(1)) << " ";
@@ -63,12 +67,12 @@ const void Renderer::render(const World &world, const std::string &filePath) con
     std::cout << "Imagem " << filePath << " pronta." << std::endl;
 }
 
-const arma::vec Renderer::trace(const Ray &ray, const World &world, const int recursionLimit) const {
-    Hit hit;
-    arma::vec color({0, 0, 0});
-    if(recursionLimit <= 0) return color;
 
-    for(Thing *t : world.things()) {
+const Hit Renderer::getClosestHit(const Ray &ray, const KDTree &tree) const {
+    Hit hit;
+    const std::vector<Thing *> things = tree.hits(ray.point(), ray.direction());
+
+    for(Thing *t : things) {
         Hit currentHit = t->intersectedBy(ray);
         if(!currentHit.happened()) continue;
         if(currentHit.t() <= 0) continue;
@@ -78,49 +82,76 @@ const arma::vec Renderer::trace(const Ray &ray, const World &world, const int re
         }
     }
 
+    return hit;
+}
+
+const arma::vec Renderer::trace(const Ray &ray, const KDTree &tree, const World &world, const int recursionLimit) const {
+    arma::vec color({0, 0, 0});
+    if(recursionLimit <= 0) return color;
+    Hit hit = getClosestHit(ray, tree);
+
     if(hit.happened()) {
         arma::vec resultColor({0, 0, 0});
 
         for(const LightSource &lightSource : world.lightSources()) {
             double tLightSource = 0;
-            bool lightDisabled = false;
-            const Material &material = hit.material();
             Ray lightRay = lightSource.lightRayTo(hit.hitPoint(), &tLightSource);
-
-            for(Thing *t : world.things()) {
-                Hit shadowTest = t->intersectedBy(lightRay);
-                if(shadowTest.happened() && shadowTest.t() > 0.001 && shadowTest.t() < tLightSource) {
-                    lightDisabled = true;
-                    break;
-                }
-            }
+            bool lightDisabled = checkForShadows(lightRay, world.things(), tLightSource);
 
             if(lightDisabled) continue;
-
-            double lambertCosine = arma::dot(hit.normal(), lightRay.direction());
-            double lambertComponent = lambertCosine > 0.0? lambertCosine : 0.0;
-            resultColor += (material.diffuseColor() % lightSource.intensity()) * lambertComponent;
-
-            if(!material.isLambertian()) {
-                arma::vec e = (ray.point() - hit.hitPoint());
-                arma::vec eNorm = e / arma::norm(e);
-                arma::vec h = eNorm + lightRay.direction();
-                arma::vec hNorm = h / arma::norm(h);
-
-                double phongCosine = arma::dot(hit.normal(), hNorm);
-                double phongComponent = phongCosine > 0.0? std::pow(phongCosine, material.shineness()) : 0.0;
-                resultColor += (material.specularColor() % lightSource.intensity()) * phongComponent;
-            }
+            resultColor += illuminate(ray, lightRay, hit, lightSource);
         }
 
-        double reflexivity = hit.material().reflexivity();
+        color += reflect(resultColor, ray, hit, tree, world, recursionLimit);
+    }
+
+    return color;
+}
+
+const bool Renderer::checkForShadows(const Ray &lightRay, const std::vector<Thing *> things, const double tLightSource) const {
+    for(Thing *t : things) {
+        Hit shadowTest = t->intersectedBy(lightRay);
+        if(shadowTest.happened() && shadowTest.t() > 0.001 && shadowTest.t() < tLightSource) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+const arma::vec Renderer::illuminate(const Ray &ray, const Ray &lightRay, const Hit &hit, const LightSource &lightSource) const {
+    arma::vec color({0, 0, 0});
+    const Material &material = hit.material();
+
+    double lambertCosine = arma::dot(hit.normal(), lightRay.direction());
+    double lambertComponent = lambertCosine > 0.0? lambertCosine : 0.0;
+    color += (material.diffuseColor() % lightSource.intensity()) * lambertComponent;
+
+    if(!material.isLambertian()) {
+        arma::vec e = (ray.point() - hit.hitPoint());
+        arma::vec eNorm = e / arma::norm(e);
+        arma::vec h = eNorm + lightRay.direction();
+        arma::vec hNorm = h / arma::norm(h);
+
+        double phongCosine = arma::dot(hit.normal(), hNorm);
+        double phongComponent = phongCosine > 0.0? std::pow(phongCosine, material.shineness()) : 0.0;
+        color += (material.specularColor() % lightSource.intensity()) * phongComponent;
+    }
+
+    return color;
+}
+
+const arma::vec Renderer::reflect(const arma::vec &color, const Ray &ray, const Hit &hit, const KDTree &tree, const World &world, const int recursionLimit) const {
+    double reflexivity = std::min(hit.material().reflexivity(), 1.0);
+
+    if(reflexivity > 0.0) {
         arma::vec d = hit.hitPoint() - ray.point();
         arma::vec dNorm = d / arma::norm(d);
         arma::vec r = dNorm - 2 * hit.normal() * arma::dot(hit.normal(), dNorm);
         arma::vec rNorm = r / arma::norm(r);
 
         Ray reflectedRay = Ray(hit.hitPoint(), rNorm);
-        color += resultColor * (1 - reflexivity) + reflexivity * (trace(reflectedRay, world, recursionLimit - 1));
+        return color * (1 - reflexivity) + reflexivity * (trace(reflectedRay, tree, world, recursionLimit - 1));
     }
 
     return color;

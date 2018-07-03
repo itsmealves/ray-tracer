@@ -40,6 +40,25 @@ class Triangle : public Thing {
             return _v3;
         };
 
+    const arma::vec massCenter() const override {
+        return (_v1 + _v2 + _v3) / 3;
+    }
+
+    const arma::vec minBounds() const override {
+        double x = std::min(v1().at(0), std::min(v2().at(0), v3().at(0)));
+        double y = std::min(v1().at(1), std::min(v2().at(1), v3().at(1)));
+        double z = std::min(v1().at(2), std::min(v2().at(2), v3().at(2)));
+
+        return arma::vec({x, y, z});
+    }
+
+    const arma::vec maxBounds() const override {
+        double x = std::max(v1().at(0), std::max(v2().at(0), v3().at(0)));
+        double y = std::max(v1().at(1), std::max(v2().at(1), v3().at(1)));
+        double z = std::max(v1().at(2), std::max(v2().at(2), v3().at(2)));
+
+        return arma::vec({x, y, z});
+    }
 
     const arma::vec normalTo(const arma::vec &point) const override {
             if(_usePlaneNormal) return _plane.normalTo(point);

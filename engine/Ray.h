@@ -11,8 +11,9 @@ class Ray {
 private:
     arma::vec _point;
     arma::vec _direction;
+    arma::vec _inverseOfDirection;
 public:
-    Ray(const arma::vec &point, const arma::vec &direction) : _point(point), _direction(direction) {};
+    Ray(const arma::vec &point, const arma::vec &direction) : _point(point), _direction(direction), _inverseOfDirection(1 / direction) {};
 
     const arma::vec &point() const {
         return _point;
@@ -20,6 +21,10 @@ public:
 
     const arma::vec &direction() const {
         return _direction;
+    }
+
+    const arma::vec &inverseOfDirection() const {
+        return _inverseOfDirection;
     }
 };
 
