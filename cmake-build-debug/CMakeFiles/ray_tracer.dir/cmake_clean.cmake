@@ -10,9 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ray_tracer.dir/parser/ObjParser.cpp.o"
   "CMakeFiles/ray_tracer.dir/parser/Parser.cpp.o"
   "CMakeFiles/ray_tracer.dir/box/AABB.cpp.o"
-  "CMakeFiles/ray_tracer.dir/tree/Node.cpp.o"
   "CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o"
-  "CMakeFiles/ray_tracer.dir/util/Globals.cpp.o"
   "ray_tracer.pdb"
   "ray_tracer"
 )

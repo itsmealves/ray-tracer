@@ -321,33 +321,9 @@ CMakeFiles/ray_tracer.dir/box/AABB.cpp.o.provides: CMakeFiles/ray_tracer.dir/box
 CMakeFiles/ray_tracer.dir/box/AABB.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/box/AABB.cpp.o
 
 
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../tree/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ray_tracer.dir/tree/Node.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/tree/Node.cpp.o -c /home/gabriel/Projetos/ray-tracer/tree/Node.cpp
-
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/tree/Node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/tree/Node.cpp > CMakeFiles/ray_tracer.dir/tree/Node.cpp.i
-
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/tree/Node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/tree/Node.cpp -o CMakeFiles/ray_tracer.dir/tree/Node.cpp.s
-
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.requires:
-
-.PHONY : CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.requires
-
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.provides: CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.provides.build
-.PHONY : CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.provides
-
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/tree/Node.cpp.o
-
-
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../tree/KDTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o -c /home/gabriel/Projetos/ray-tracer/tree/KDTree.cpp
 
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.i: cmake_force
@@ -369,30 +345,6 @@ CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o.provides: CMakeFiles/ray_tracer.dir/
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o
 
 
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.o: CMakeFiles/ray_tracer.dir/flags.make
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.o: ../util/Globals.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ray_tracer.dir/util/Globals.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ray_tracer.dir/util/Globals.cpp.o -c /home/gabriel/Projetos/ray-tracer/util/Globals.cpp
-
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer.dir/util/Globals.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Projetos/ray-tracer/util/Globals.cpp > CMakeFiles/ray_tracer.dir/util/Globals.cpp.i
-
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer.dir/util/Globals.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Projetos/ray-tracer/util/Globals.cpp -o CMakeFiles/ray_tracer.dir/util/Globals.cpp.s
-
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.requires:
-
-.PHONY : CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.requires
-
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.provides: CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.provides.build
-.PHONY : CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.provides
-
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.provides.build: CMakeFiles/ray_tracer.dir/util/Globals.cpp.o
-
-
 # Object files for target ray_tracer
 ray_tracer_OBJECTS = \
 "CMakeFiles/ray_tracer.dir/main.cpp.o" \
@@ -406,9 +358,7 @@ ray_tracer_OBJECTS = \
 "CMakeFiles/ray_tracer.dir/parser/ObjParser.cpp.o" \
 "CMakeFiles/ray_tracer.dir/parser/Parser.cpp.o" \
 "CMakeFiles/ray_tracer.dir/box/AABB.cpp.o" \
-"CMakeFiles/ray_tracer.dir/tree/Node.cpp.o" \
-"CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o" \
-"CMakeFiles/ray_tracer.dir/util/Globals.cpp.o"
+"CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o"
 
 # External object files for target ray_tracer
 ray_tracer_EXTERNAL_OBJECTS =
@@ -424,13 +374,11 @@ ray_tracer: CMakeFiles/ray_tracer.dir/parser/Element.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/parser/ObjParser.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/parser/Parser.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/box/AABB.cpp.o
-ray_tracer: CMakeFiles/ray_tracer.dir/tree/Node.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o
-ray_tracer: CMakeFiles/ray_tracer.dir/util/Globals.cpp.o
 ray_tracer: CMakeFiles/ray_tracer.dir/build.make
 ray_tracer: /usr/lib/libarmadillo.so
 ray_tracer: CMakeFiles/ray_tracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ray_tracer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ray_tracer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ray_tracer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -449,9 +397,7 @@ CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/parser/Element.cpp
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/parser/ObjParser.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/parser/Parser.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/box/AABB.cpp.o.requires
-CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/tree/Node.cpp.o.requires
 CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o.requires
-CMakeFiles/ray_tracer.dir/requires: CMakeFiles/ray_tracer.dir/util/Globals.cpp.o.requires
 
 .PHONY : CMakeFiles/ray_tracer.dir/requires
 

@@ -5,7 +5,6 @@
 #include "../engine/Hit.h"
 #include "../engine/Ray.h"
 #include "../box/AABB.h"
-#include "../util/MissingMethods.h"
 #include "../box/BoxHit.h"
 #include <vector>
 #include <cfloat>

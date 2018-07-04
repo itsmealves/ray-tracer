@@ -420,60 +420,6 @@ tree/KDTree.cpp.s:
 	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.s
 .PHONY : tree/KDTree.cpp.s
 
-tree/Node.o: tree/Node.cpp.o
-
-.PHONY : tree/Node.o
-
-# target to build an object file
-tree/Node.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/Node.cpp.o
-.PHONY : tree/Node.cpp.o
-
-tree/Node.i: tree/Node.cpp.i
-
-.PHONY : tree/Node.i
-
-# target to preprocess a source file
-tree/Node.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/Node.cpp.i
-.PHONY : tree/Node.cpp.i
-
-tree/Node.s: tree/Node.cpp.s
-
-.PHONY : tree/Node.s
-
-# target to generate assembly for a file
-tree/Node.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/tree/Node.cpp.s
-.PHONY : tree/Node.cpp.s
-
-util/Globals.o: util/Globals.cpp.o
-
-.PHONY : util/Globals.o
-
-# target to build an object file
-util/Globals.cpp.o:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Globals.cpp.o
-.PHONY : util/Globals.cpp.o
-
-util/Globals.i: util/Globals.cpp.i
-
-.PHONY : util/Globals.i
-
-# target to preprocess a source file
-util/Globals.cpp.i:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Globals.cpp.i
-.PHONY : util/Globals.cpp.i
-
-util/Globals.s: util/Globals.cpp.s
-
-.PHONY : util/Globals.s
-
-# target to generate assembly for a file
-util/Globals.cpp.s:
-	$(MAKE) -f CMakeFiles/ray_tracer.dir/build.make CMakeFiles/ray_tracer.dir/util/Globals.cpp.s
-.PHONY : util/Globals.cpp.s
-
 world/LightSource.o: world/LightSource.cpp.o
 
 .PHONY : world/LightSource.o
@@ -543,12 +489,6 @@ help:
 	@echo "... tree/KDTree.o"
 	@echo "... tree/KDTree.i"
 	@echo "... tree/KDTree.s"
-	@echo "... tree/Node.o"
-	@echo "... tree/Node.i"
-	@echo "... tree/Node.s"
-	@echo "... util/Globals.o"
-	@echo "... util/Globals.i"
-	@echo "... util/Globals.s"
 	@echo "... world/LightSource.o"
 	@echo "... world/LightSource.i"
 	@echo "... world/LightSource.s"

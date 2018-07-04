@@ -21,7 +21,6 @@ CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../parser/Parser.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../parser/RTParser.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../tree/KDTree.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../tree/Node.h
-CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/HitBox.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/LightSource.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/Material.h
@@ -42,7 +41,6 @@ CMakeFiles/ray_tracer.dir/main.cpp.o: ../things/Sphere.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../things/Triangle.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../tree/KDTree.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../tree/Node.h
-CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/HitBox.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../world/LightSource.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../world/Material.h
@@ -127,25 +125,9 @@ CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../tree/KDTree.cpp
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../tree/KDTree.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../tree/Node.h
-CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../util/HitBox.h
-CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../util/MissingMethods.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../world/Material.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../world/Thing.h
-
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../box/AABB.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../box/BoxHit.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../engine/Hit.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../engine/Ray.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../tree/Node.cpp
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../tree/Node.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../util/Globals.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../util/text.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../world/Material.h
-CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../world/Thing.h
-
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.o: ../util/Globals.cpp
-CMakeFiles/ray_tracer.dir/util/Globals.cpp.o: ../util/Globals.h
 
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o: ../util/text.h

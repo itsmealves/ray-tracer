@@ -15,8 +15,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gabriel/Projetos/ray-tracer/things/Sphere.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Sphere.cpp.o"
   "/home/gabriel/Projetos/ray-tracer/things/Triangle.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o"
   "/home/gabriel/Projetos/ray-tracer/tree/KDTree.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o"
-  "/home/gabriel/Projetos/ray-tracer/tree/Node.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/tree/Node.cpp.o"
-  "/home/gabriel/Projetos/ray-tracer/util/Globals.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/util/Globals.cpp.o"
   "/home/gabriel/Projetos/ray-tracer/world/LightSource.cpp" "/home/gabriel/Projetos/ray-tracer/cmake-build-debug/CMakeFiles/ray_tracer.dir/world/LightSource.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

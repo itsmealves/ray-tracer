@@ -6,7 +6,6 @@
 #define KDTREE_KDTREE_H
 
 #include "Node.h"
-#include "../util/HitBox.h"
 #include "../world/Thing.h"
 
 class KDTree {

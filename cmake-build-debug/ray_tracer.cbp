@@ -154,22 +154,7 @@
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/tree/KDTree.h">
 			<Option target="ray_tracer"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/tree/Node.cpp">
-			<Option target="ray_tracer"/>
-		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/tree/Node.h">
-			<Option target="ray_tracer"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Globals.cpp">
-			<Option target="ray_tracer"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/Globals.h">
-			<Option target="ray_tracer"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/HitBox.h">
-			<Option target="ray_tracer"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/MissingMethods.h">
 			<Option target="ray_tracer"/>
 		</Unit>
 		<Unit filename="/home/gabriel/Projetos/ray-tracer/util/text.h">
