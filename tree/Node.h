@@ -25,8 +25,12 @@ public:
         _left(left), _right(right), _box(nullptr), _cutDirection(cutDirection), _cutThreshold(cutThreshold) {
 
         _box = left->box()->join(right->box());
-    }
+    }cutDirection
 
+    Node(AABB* aabb,int cutDirection,double cutThreshold):_box(aabb),_cutDirection(cutDirection),_cutThreshold(cutThreshold)
+    {
+
+    }
     Node(std::vector<Thing *> things) :
             _left(nullptr), _right(nullptr), _box(nullptr) {
 
@@ -73,6 +77,29 @@ public:
 
     Node *right() const {
         return _right;
+    }
+
+    void addLeft(Node* left) {
+        _left = left;
+    }
+
+    void addRight(Node* right) {
+        _right = right;
+    }
+
+    void makeBranch(Node* root, DIRECTION dir, double cutPoint){
+        AABB** node = root->box()->divideAABB(dir,cutPoint);
+        _left  = new Node(node[0],dir,cutPoint);
+        _right = new Node(node[1],dir,cutPoint);
+        delete[] node;
+    }
+
+    const int cutDirection() const {
+        return _cutDirection;
+    }
+
+    const double cutThreshold() const {
+        return _cutThreshold;
     }
 };
 

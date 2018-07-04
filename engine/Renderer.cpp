@@ -50,6 +50,7 @@ const void Renderer::render(const World &world, const std::string &filePath) con
     std::cout << "Aguarde uns instantes" << std::endl;
     for(int j = 0; j < _height; j++) {
         for(int i = 0; i < _width; i++) {
+           // printf("%d - %d \n",j,i);
             const int recursionLimit = 2;
             Ray ray = shoot(arma::vec({(double) i, (double) j, 1.0}));
             arma::vec color = trace(ray, tree, world, recursionLimit) + world.ambientColor();

@@ -9,6 +9,16 @@
 #include <vector>
 #include <cfloat>
 
+bool sortInX(Thing *i, Thing *j){
+    return i->massCenter().at(0) > j->massCenter().at(0);
+}
+bool sortInY(Thing *i, Thing *j){
+    return i->massCenter().at(1) > j->massCenter().at(1);
+}
+bool sortInZ(Thing *i, Thing *j){
+    return i->massCenter().at(2) > j->massCenter().at(2);
+}
+#ifdef __AABBTREE
 struct ThingSortingClass {
     int cutDirection;
     bool operator() (Thing *i, Thing *j) {
@@ -18,8 +28,9 @@ struct ThingSortingClass {
         return iCenter.at(cutDirection) < jCenter.at(cutDirection);
     }
 } thingSortingObject;
-
+#endif
 Node *KDTree::build(const std::vector<Thing *> things, int currentDirection) {
+#ifdef __AABBTREE
     if(things.size() <= 1) {
         return new Node(things);
     } else {
@@ -46,6 +57,35 @@ Node *KDTree::build(const std::vector<Thing *> things, int currentDirection) {
         Node *right = build(upperThings, nextDirection);
         return new Node(left, right, currentDirection, cutThreshold);
     }
+#else
+    Node* scene = new Node(things);
+    Node* currentNode;
+    std::vector<Node*> keys;
+    std::map<Node* , std::vector<Thing*>> elems;
+    std::vector<Thing*> left,right;
+    elems.insert(new std::pair<Node*,std::vector<Thing*>>(scene,things));
+    int dir;
+    for(int i = 0;!keys.empty();i++)
+    {
+        currentNode = keys[keys.size() -1];
+        keys.pop_back();
+        dir = i%3;
+        switch(dir){
+            case X_DIR:
+                std::sort(elems.begin(), elems.end(), sortInX);
+                break;
+            case Y_DIR:
+                std::sort(elems.begin(), elems.end(), sortInY);
+                break;
+            case Z_DIR:
+                std::sort(elems.begin(), elems.end(), sortInZ);
+                break;
+        }
+        left = (elems.at(currentNode));
+        right = (elems.at(currentNode));
+
+    }
+#endif
 }
 
 const std::vector<Thing *> KDTree::traverse(const Ray &ray) const {
@@ -53,17 +93,29 @@ const std::vector<Thing *> KDTree::traverse(const Ray &ray) const {
 }
 
 const std::vector<Thing *> KDTree::traverse(const Ray &ray, Node *root) const {
-    if(root->isLeaf()) return root->box()->things();
+    if(root->isLeaf())
+    {
+        return root->box()->things();
+    }
     BoxHit hit = root->box()->intersectedBy(ray);
 
     if(hit.happened()) {
+#ifdef __alvesDOIDO
+        if(hit.nearest().at(root->cutDirection()) < root->cutThreshold()) {
+            root = root->left();
+        } else {
+            root = root->right();
+        }
+#elif __alvesRLDOido
+        std::vector<>
+#else
         std::vector<Thing *> a = traverse(ray, root->left());
         std::vector<Thing *> b = traverse(ray, root->right());
 
         for(Thing *t : b) {
             a.push_back(t);
         }
-
+#endif
         return a;
     } else {
         return std::vector<Thing *>();

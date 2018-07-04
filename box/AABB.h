@@ -8,12 +8,18 @@
 #include <armadillo>
 #include "../world/Thing.h"
 #include "BoxHit.h"
+enum DIRECTION{
+    X_DIR =0,Y_DIR,
+    Z_DIR
+
+};
 
 class AABB {
 private:
     std::vector<Thing *> _things;
     arma::vec _minBounds;
     arma::vec _maxBounds;
+    AABB();
 public:
     AABB(const arma::vec minBounds, const arma::vec maxBounds) :
         _minBounds(minBounds), _maxBounds(maxBounds) {};
@@ -35,6 +41,7 @@ public:
     BoxHit intersectedBy(const Ray &ray) const;
 
     AABB *join(AABB *otherBox) const;
+    AABB **divideAABB(DIRECTION dir, double cutPoint) const;
 };
 
 

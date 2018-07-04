@@ -11,6 +11,7 @@ BoxHit AABB::intersectedBy(const Ray &ray) const {
 
     double tMax = INFINITY;
     double tMin = -INFINITY;
+ //   return BoxHit({-0.0,-0.0,-0.0}, {0.0,0.0,0.0});
 
     int numDirections = 3;
 
@@ -19,7 +20,10 @@ BoxHit AABB::intersectedBy(const Ray &ray) const {
 
         if(checkForParallelism) {
             bool outOfBox = ray.point().at(i) < minBounds().at(i) || ray.point().at(i) > maxBounds().at(i);
-            if(outOfBox) return BoxHit();
+            if(outOfBox)
+            {
+                return BoxHit();
+            }
         }
 
         double t1 = (minBounds().at(i) - ray.point().at(i)) * ray.inverseOfDirection().at(i);
@@ -30,8 +34,14 @@ BoxHit AABB::intersectedBy(const Ray &ray) const {
 
         if(currentMin > tMin) tMin = currentMin;
         if(currentMax < tMax) tMax = currentMax;
-        if(tMin > tMax) return BoxHit();
-        if(tMax < 0) return BoxHit();
+        if(tMin > tMax)
+        {
+            return BoxHit();
+        }
+        if(tMax < 0)
+        {
+            return BoxHit();
+        }
     }
 
     arma::vec nearest = ray.point() + tMin * ray.direction();
@@ -52,4 +62,26 @@ AABB *AABB::join(AABB *otherBox) const {
     arma::vec minBounds({xMin, yMin, zMin});
     arma::vec maxBounds({xMax, yMax, zMax});
     return new AABB(minBounds, maxBounds);
+}
+
+AABB** AABB::divideAABB(DIRECTION dir, double cutPoint) const{
+    AABB** rValue;
+    rValue = new AABB*[2];
+    arma::vec cutpointMin = {0,0,0};
+    arma::vec min = this->minBounds();
+    arma::vec max = this->maxBounds();
+    arma::vec cutpointMax = {0,0,0};
+    for (int i = 0; i < 3; ++i) {
+        if(i == dir){
+            cutpointMin[i] = cutPoint;
+            cutpointMax[i] = cutPoint;
+        }
+        else{
+            cutpointMin[i] = min[i];
+            cutpointMax[i] = max[i];
+        }
+    }
+    rValue[0] = new AABB(cutpointMin,max);
+    rValue[1] = new AABB(min,cutpointMin);
+    return rValue;
 }
