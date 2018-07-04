@@ -3,6 +3,7 @@
 
 CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../box/AABB.cpp
 CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../box/AABB.h
+CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../box/BoxHit.h
 CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../engine/Hit.h
 CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../util/text.h
@@ -10,6 +11,7 @@ CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../world/Material.h
 CMakeFiles/ray_tracer.dir/box/AABB.cpp.o: ../world/Thing.h
 
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../box/AABB.h
+CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../box/BoxHit.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../engine/Hit.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../engine/Renderer.cpp
@@ -19,6 +21,7 @@ CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../parser/Parser.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../parser/RTParser.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../tree/KDTree.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../tree/Node.h
+CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/HitBox.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/LightSource.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/Material.h
@@ -26,6 +29,7 @@ CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/Thing.h
 CMakeFiles/ray_tracer.dir/engine/Renderer.cpp.o: ../world/World.h
 
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../box/AABB.h
+CMakeFiles/ray_tracer.dir/main.cpp.o: ../box/BoxHit.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../engine/Hit.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../engine/Renderer.h
@@ -38,6 +42,7 @@ CMakeFiles/ray_tracer.dir/main.cpp.o: ../things/Sphere.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../things/Triangle.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../tree/KDTree.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../tree/Node.h
+CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/HitBox.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../world/LightSource.h
 CMakeFiles/ray_tracer.dir/main.cpp.o: ../world/Material.h
@@ -116,17 +121,20 @@ CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o: ../world/Material.h
 CMakeFiles/ray_tracer.dir/things/Triangle.cpp.o: ../world/Thing.h
 
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../box/AABB.h
+CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../box/BoxHit.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../engine/Hit.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../tree/KDTree.cpp
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../tree/KDTree.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../tree/Node.h
+CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../util/HitBox.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../util/MissingMethods.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../util/text.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../world/Material.h
 CMakeFiles/ray_tracer.dir/tree/KDTree.cpp.o: ../world/Thing.h
 
 CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../box/AABB.h
+CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../box/BoxHit.h
 CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../engine/Hit.h
 CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../engine/Ray.h
 CMakeFiles/ray_tracer.dir/tree/Node.cpp.o: ../tree/Node.cpp

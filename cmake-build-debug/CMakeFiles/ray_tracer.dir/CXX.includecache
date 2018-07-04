@@ -7,14 +7,26 @@
 #IncludeRegexTransform: 
 
 /home/gabriel/Projetos/ray-tracer/box/AABB.cpp
+cfloat
+-
 AABB.h
 /home/gabriel/Projetos/ray-tracer/box/AABB.h
+../engine/Ray.h
+/home/gabriel/Projetos/ray-tracer/engine/Ray.h
+BoxHit.h
+/home/gabriel/Projetos/ray-tracer/box/BoxHit.h
 
 /home/gabriel/Projetos/ray-tracer/box/AABB.h
 armadillo
 -
 ../world/Thing.h
 /home/gabriel/Projetos/ray-tracer/world/Thing.h
+BoxHit.h
+/home/gabriel/Projetos/ray-tracer/box/BoxHit.h
+
+/home/gabriel/Projetos/ray-tracer/box/BoxHit.h
+armadillo
+-
 
 /home/gabriel/Projetos/ray-tracer/engine/Hit.h
 armadillo
@@ -157,18 +169,28 @@ Plane.h
 /home/gabriel/Projetos/ray-tracer/tree/KDTree.cpp
 KDTree.h
 /home/gabriel/Projetos/ray-tracer/tree/KDTree.h
+../engine/Hit.h
+/home/gabriel/Projetos/ray-tracer/engine/Hit.h
+../engine/Ray.h
+/home/gabriel/Projetos/ray-tracer/engine/Ray.h
 ../box/AABB.h
 /home/gabriel/Projetos/ray-tracer/box/AABB.h
-../world/Thing.h
-/home/gabriel/Projetos/ray-tracer/world/Thing.h
 ../util/MissingMethods.h
 /home/gabriel/Projetos/ray-tracer/util/MissingMethods.h
+../box/BoxHit.h
+/home/gabriel/Projetos/ray-tracer/box/BoxHit.h
 vector
+-
+cfloat
 -
 
 /home/gabriel/Projetos/ray-tracer/tree/KDTree.h
 Node.h
 /home/gabriel/Projetos/ray-tracer/tree/Node.h
+../util/HitBox.h
+/home/gabriel/Projetos/ray-tracer/util/HitBox.h
+../world/Thing.h
+/home/gabriel/Projetos/ray-tracer/world/Thing.h
 
 /home/gabriel/Projetos/ray-tracer/tree/Node.cpp
 Node.h
@@ -181,18 +203,22 @@ vector
 -
 armadillo
 -
+cfloat
+-
 ../box/AABB.h
 /home/gabriel/Projetos/ray-tracer/box/AABB.h
-../engine/Ray.h
-/home/gabriel/Projetos/ray-tracer/engine/Ray.h
-../world/Thing.h
-/home/gabriel/Projetos/ray-tracer/world/Thing.h
 
 /home/gabriel/Projetos/ray-tracer/util/Globals.cpp
 Globals.h
 /home/gabriel/Projetos/ray-tracer/util/Globals.h
 
 /home/gabriel/Projetos/ray-tracer/util/Globals.h
+
+/home/gabriel/Projetos/ray-tracer/util/HitBox.h
+armadillo
+-
+../engine/Hit.h
+/home/gabriel/Projetos/ray-tracer/engine/Hit.h
 
 /home/gabriel/Projetos/ray-tracer/util/MissingMethods.h
 armadillo

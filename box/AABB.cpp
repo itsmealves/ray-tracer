@@ -2,55 +2,54 @@
 // Created by calazans on 23/06/18.
 //
 
+#include <cfloat>
 #include "AABB.h"
-#define min(x, y) ((x) < (y) ? (x) : (y))
-//#define min3(x, y, z) min(x, min(y,z))
-#define max(x, y) ((x) > (y) ? (x) : (y))
-//#define max3(x, y,z ) max(x, max(y,z))
+#include "../engine/Ray.h"
+#include "BoxHit.h"
 
-void AABB::calculateMeanPoint(){
-    this->meanPoint_ =  (this->edges_[0] - this->edges_[1]) / 2;
-}
-/*Links:
-    https://tavianator.com/fast-branchless-raybounding-box-intersections/
-    https://www.siggraph.org//education/materials/HyperGraph/raytrace/rtinter3.htm
- */
-/**   \fn bool AABB::intercepts(const Ray& point)
-      \param point Raio saido da origem em qualquer direção a BoundBox.
-      \return Retorna se o raio interseptou ou não a boundbox
- **/
-bool AABB::intercepts(const Ray& point) const{
-    /**
-    Considerando a equação da reta \f$ Point(T) = Origin + T * Direction\f$
-    ao isolamos o t temos:
-    \f$ T = ( Point(T) - Origin ) / Direction\f$
-    **/
-    double tx1 = (this->edges_[1][0] - point.point()[0]) * point.inverseOfDirection()[0];
-    double tx2 = (this->edges_[0][0] - point.point()[0]) * point.inverseOfDirection()[0];
-    double tmin = min(tx1, tx2);
-    double tmax = max(tx1, tx2);
+BoxHit AABB::intersectedBy(const Ray &ray) const {
 
-    double ty1 = (this->edges_[1][1] - point.point()[1]) * point.inverseOfDirection()[1];
-    double ty2 = (this->edges_[0][1] - point.point()[1]) * point.inverseOfDirection()[1];
+    double tMax = INFINITY;
+    double tMin = -INFINITY;
 
-    tmin = max(tmin, min(min(ty1, ty2), tmax));
-    tmax = min(tmax, max(max(ty1, ty2), tmin));
+    int numDirections = 3;
 
-    double tz1 = (this->edges_[1][2] - point.point()[2]) * point.inverseOfDirection()[2];
-    double tz2 = (this->edges_[0][2] - point.point()[2]) * point.inverseOfDirection()[2];
+    for(int i = 0; i < numDirections; i++) {
+        bool checkForParallelism = ray.direction().at(i) == 0.0;
 
+        if(checkForParallelism) {
+            bool outOfBox = ray.point().at(i) < minBounds().at(i) || ray.point().at(i) > maxBounds().at(i);
+            if(outOfBox) return BoxHit();
+        }
 
-    tmin = max(tmin, min(min(tz1, tz2), tmax));
-    tmax = min(tmax, max(max(tz1, tz2), tmin));
-    return tmax >= tmin;
+        double t1 = (minBounds().at(i) - ray.point().at(i)) * ray.inverseOfDirection().at(i);
+        double t2 = (maxBounds().at(i) - ray.point().at(i)) * ray.inverseOfDirection().at(i);
+
+        double currentMin = std::min(t1, t2);
+        double currentMax = std::max(t1, t2);
+
+        if(currentMin > tMin) tMin = currentMin;
+        if(currentMax < tMax) tMax = currentMax;
+        if(tMin > tMax) return BoxHit();
+        if(tMax < 0) return BoxHit();
+    }
+
+    arma::vec nearest = ray.point() + tMin * ray.direction();
+    arma::vec farthest = ray.point() + tMax * ray.direction();
+    return BoxHit(nearest, farthest);
 }
 
-double AABB::calculateDistance(const AABB* distanceObj){
-    arma::vec midPoint = this->meanPoint_;
-    arma::vec distanceMidPoint = distanceObj->meanPoint_;
-    double distance = pow(midPoint[0] - distanceMidPoint[0],2.0) +
-                      pow(midPoint[1] - distanceMidPoint[1],2.0) +
-                      pow(midPoint[2] - distanceMidPoint[2],2.0);
+AABB *AABB::join(AABB *otherBox) const {
+    double xMin = std::min(minBounds().at(0), otherBox->minBounds().at(0));
+    double xMax = std::max(maxBounds().at(0), otherBox->maxBounds().at(0));
 
-    return distance;//std::sqrt(distance);
+    double yMin = std::min(minBounds().at(1), otherBox->minBounds().at(1));
+    double yMax = std::max(maxBounds().at(1), otherBox->maxBounds().at(1));
+
+    double zMin = std::min(minBounds().at(2), otherBox->minBounds().at(2));
+    double zMax = std::max(maxBounds().at(2), otherBox->maxBounds().at(2));
+
+    arma::vec minBounds({xMin, yMin, zMin});
+    arma::vec maxBounds({xMax, yMax, zMax});
+    return new AABB(minBounds, maxBounds);
 }

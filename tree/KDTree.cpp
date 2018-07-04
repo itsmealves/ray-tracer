@@ -2,180 +2,71 @@
 // Created by calazans on 23/06/18.
 //
 #include "KDTree.h"
+#include "../engine/Hit.h"
+#include "../engine/Ray.h"
 #include "../box/AABB.h"
-#include "../world/Thing.h"
 #include "../util/MissingMethods.h"
+#include "../box/BoxHit.h"
 #include <vector>
-Node* makeBranchZ(std::vector<Node*> objects);
-Node* makeBranchX(std::vector<Node*> objects);
-Node* makeBranchY(std::vector<Node*> objects);
+#include <cfloat>
 
-bool sortY(Node* i,Node* j){
-    return i->getMeanPoint()[1] < j->getMeanPoint()[1];
-}
-Node* makeBranchY(std::vector<Node*> objects)
-{
-    if(objects.size() == 1){
-        return objects[0];
-    }else if (objects.empty()){
-        return nullptr;
+struct ThingSortingClass {
+    int cutDirection;
+    bool operator() (Thing *i, Thing *j) {
+        arma::vec iCenter = i->massCenter();
+        arma::vec jCenter = j->massCenter();
+
+        return iCenter.at(cutDirection) < jCenter.at(cutDirection);
     }
+} thingSortingObject;
 
-    std::vector<Node*> right;
-    std::vector<Node*> left;
+Node *KDTree::build(const std::vector<Thing *> things, int currentDirection) {
+    if(things.size() <= 1) {
+        return new Node(things);
+    } else {
+        int half = (int) (things.size() / 2);
+        std::vector<Thing *> sorted;
 
-    std::sort(objects.begin(),objects.end(),sortY);
-
-    for (int i =0 ; i < objects.size()/2;++i) {
-        left.push_back(objects[i]);
-    }
-    for (int i =objects.size()/2 ; i < objects.size();++i) {
-        right.push_back(objects[i]);
-    }
-
-    return Node::intBranch(
-            makeBranchZ(left),
-            makeBranchZ(right)
-    );
-}
-
-bool sortZ(Node* i,Node* j){
-    return i->getMeanPoint()[2] < j->getMeanPoint()[2];
-}
-Node* makeBranchZ(std::vector<Node*> objects)
-{
-    if(objects.size() == 1){
-        return objects[0];
-    }else if (objects.empty()){
-        return nullptr;
-    }
-
-    std::vector<Node*> right;
-    std::vector<Node*> left;
-
-    std::sort(objects.begin(),objects.end(),sortZ);
-
-    for (int i =0 ; i < objects.size()/2;++i) {
-        left.push_back(objects[i]);
-    }
-    for (int i =objects.size()/2 ; i < objects.size();++i) {
-        right.push_back(objects[i]);
-    }
-
-    return Node::intBranch(
-            makeBranchX(left),
-            makeBranchX(right)
-    );
-}
-
-bool sortX(Node* i,Node* j){
-    return i->getMeanPoint()[0] < j->getMeanPoint()[0];
-}
-Node* makeBranchX(std::vector<Node*> objects)
-{
-    if(objects.size() == 1){
-        return objects[0];
-    }else if (objects.empty()){
-        return nullptr;
-    }
-
-    std::vector<Node*> right;
-    std::vector<Node*> left;
-
-    std::sort(objects.begin(),objects.end(),sortX);
-
-    for (int i =0 ; i < objects.size()/2;++i) {
-        left.push_back(objects[i]);
-    }
-    for (int i =objects.size()/2 ; i < objects.size();++i) {
-        right.push_back(objects[i]);
-    }
-
-    return Node::intBranch(
-            makeBranchY(left),
-            makeBranchY(right)
-    );
-}
-
-//TODO: OPTIMIZE
-void KDTree::insert(const std::vector<Thing *>& objects)
-{
-    std::vector<Node*> vec;
-    AABB* aabbs;
-    Node* newNode;
-    Thing *elem;
-
-    //Cria AABBS baseadas nos objetos
-    for (int i = 0;i < objects.size(); i++)
-    {
-        elem = objects[i];
-        aabbs = new AABB(elem, getMinBounds(elem),getMaxBounds(elem),getCenter(elem));
-        newNode = new Node(aabbs);
-        vec.push_back(newNode);
-    }
-
-    this->root = makeBranchX(vec);
-}
-//TODO: O(N)
-//Busca em profundidade pelos elementos que acertaram
-const std::vector<Thing*> KDTree::hits(const arma::vec& origin, const arma::vec& dir) const
-{
-    std::vector<Node*> nodes;
-    std::vector<Thing*> rObjects;
-    nodes.push_back(this->root);
-    Node *currentElement;
-    Ray interceptionRay = Ray(origin,dir);
-
-    while(!nodes.empty())
-    {
-        currentElement = nodes[nodes.size() -1];
-        nodes.pop_back();
-        //Bateu no BoundBox Grande?
-        //Seria uma otimização só perguntar para as folhas se bateu?
-        if(currentElement->hits(interceptionRay)){
-            Node* left = currentElement->getLeft();
-            Node* right = currentElement->getRight();
-            //Tem alguem a esquerda?
-            if(left)
-            {
-                nodes.push_back(left);
-            }
-            //Tem alguem a direita?
-            if(right)
-            {
-                nodes.push_back(right);
-            }
-            //É uma folha?
-            if(!left && !right)
-            {
-                rObjects.push_back(currentElement->getObject());
-            }
+        for(Thing *t : things) {
+            sorted.push_back(t);
         }
+
+        thingSortingObject.cutDirection = currentDirection;
+        std::sort(sorted.begin(), sorted.end(), thingSortingObject);
+
+        std::vector<Thing *> lowerThings; std::vector<Thing *> upperThings;
+        for(int i = 0; i < half; i++) lowerThings.push_back(sorted.at(i));
+        for(int i = half; i < things.size(); i++) upperThings.push_back(sorted.at(i));
+
+        arma::vec firstUpper = upperThings.at(0)->massCenter();
+        arma::vec lastLower = lowerThings.at(lowerThings.size() - 1)->massCenter();
+        double cutThreshold = (firstUpper.at(currentDirection) + lastLower.at(currentDirection)) / 2.0;
+
+        int nextDirection = (currentDirection + 1) % 3;
+        Node *left = build(lowerThings, nextDirection);
+        Node *right = build(upperThings, nextDirection);
+        return new Node(left, right, currentDirection, cutThreshold);
     }
-    return rObjects;
 }
 
-#ifdef _TESTE
-int profundidade(const Node* elem){
-    int value = 0;
-    if(elem){
-        if(elem->getRight() && elem->getLeft()){
-            int r = profundidade(elem->getRight()) +1;
-            int l = profundidade(elem->getLeft()) +1;
-            value = std::max(r,l);
-        }
-        else if(elem->getRight()  && elem->getLeft()== NULL){
-            value = profundidade(elem->getRight()) +1;
-        }else if(elem->getRight()== NULL  && elem->getLeft()){
-            value = profundidade(elem->getLeft()) +1;
-        }else{
-            value =  1;
-        }
-    }
-    return value;
+const std::vector<Thing *> KDTree::traverse(const Ray &ray) const {
+    return traverse(ray, root);
 }
 
-void KDTree::ValidInfo(){
-    printf("%d",profundidade(this->root));
+const std::vector<Thing *> KDTree::traverse(const Ray &ray, Node *root) const {
+    if(root->isLeaf()) return root->box()->things();
+    BoxHit hit = root->box()->intersectedBy(ray);
+
+    if(hit.happened()) {
+        std::vector<Thing *> a = traverse(ray, root->left());
+        std::vector<Thing *> b = traverse(ray, root->right());
+
+        for(Thing *t : b) {
+            a.push_back(t);
+        }
+
+        return a;
+    } else {
+        return std::vector<Thing *>();
+    }
 }
-#endif

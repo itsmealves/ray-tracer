@@ -10,12 +10,10 @@
 
 arma::vec getMinBounds(const Thing *value) {
     return value->minBounds();
-}
-
+};
 arma::vec getCenter(const Thing *value) {
     return value->massCenter();
 }
-
 arma::vec getMaxBounds(const Thing *value) {
     return value->maxBounds();
 }

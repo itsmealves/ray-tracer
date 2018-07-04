@@ -46,9 +46,8 @@ const void Renderer::render(const World &world, const std::string &filePath) con
     file << _width << " " << _height << std::endl;
     file << "255" << std::endl;
 
-    KDTree tree;
-    tree.insert(world.things());
-
+    KDTree tree(world.things());
+    std::cout << "Aguarde uns instantes" << std::endl;
     for(int j = 0; j < _height; j++) {
         for(int i = 0; i < _width; i++) {
             const int recursionLimit = 2;
@@ -70,7 +69,7 @@ const void Renderer::render(const World &world, const std::string &filePath) con
 
 const Hit Renderer::getClosestHit(const Ray &ray, const KDTree &tree) const {
     Hit hit;
-    const std::vector<Thing *> things = tree.hits(ray.point(), ray.direction());
+    std::vector<Thing *> things = tree.traverse(ray);
 
     for(Thing *t : things) {
         Hit currentHit = t->intersectedBy(ray);

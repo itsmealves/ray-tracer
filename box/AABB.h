@@ -7,43 +7,34 @@
 
 #include <armadillo>
 #include "../world/Thing.h"
+#include "BoxHit.h"
 
 class AABB {
 private:
-    Thing *value_;
-    arma::vec  edges_[2];
-    arma::vec  meanPoint_;
-    void calculateMeanPoint();
+    std::vector<Thing *> _things;
+    arma::vec _minBounds;
+    arma::vec _maxBounds;
 public:
-    AABB(Thing* value,const arma::vec& minCords,const arma::vec& maxCords): value_(value)
-    {
-        edges_[0] = (minCords);
-        edges_[1] = (maxCords);
-        calculateMeanPoint();
+    AABB(const arma::vec minBounds, const arma::vec maxBounds) :
+        _minBounds(minBounds), _maxBounds(maxBounds) {};
+
+    AABB(const arma::vec minBounds, const arma::vec maxBounds, const std::vector<Thing *> things) :
+        _minBounds(minBounds), _maxBounds(maxBounds), _things(things) {};
+
+    const arma::vec maxBounds() const {
+        return _maxBounds;
     }
-    AABB(Thing* value,const arma::vec& minCords,const arma::vec& maxCords,const arma::vec& meanPoint): value_(value),meanPoint_(meanPoint)
-    {
-        edges_[0] = (minCords);
-        edges_[1] = (maxCords);
-    }
-    const arma::vec getMin(){
-        return edges_[0];
-    }
-    const arma::vec getMax(){
-        return edges_[1];
+    const arma::vec minBounds() const {
+        return _minBounds;
     }
 
-    const arma::vec getMean(){
-        return meanPoint_;
+    const std::vector<Thing *> things() const {
+        return _things;
     }
 
-    Thing *getObject(){
-        return value_;
-    }
+    BoxHit intersectedBy(const Ray &ray) const;
 
-    bool intercepts(const Ray& point) const;
-
-    double calculateDistance(const AABB* distanceObj);
+    AABB *join(AABB *otherBox) const;
 };
 
 

@@ -8,63 +8,71 @@
 
 #include <vector>
 #include <armadillo>
+#include <cfloat>
 #include "../box/AABB.h"
-#include "../engine/Ray.h"
-#include "../world/Thing.h"
 
 class Node {
 private:
-    Node*  left_    ;
-    Node*  right_   ;
-    AABB*  boundBox_;
+    AABB *_box;
+    Node *_left;
+    Node *_right;
 
-    Node(){};
-    Node(Node* left, Node* right, AABB* boundBox):boundBox_(boundBox),right_(right),left_(left){};
+    int _cutDirection;
+    double _cutThreshold;
 public:
-    Node(AABB* boundBox):boundBox_(boundBox)
-    {
-        left_ = nullptr;
-        right_ = nullptr;
-    };
 
-    virtual ~Node(){
-        if(left_)
-        {
-            delete left_;
+    Node(Node *left, Node *right, int cutDirection, double cutThreshold) :
+        _left(left), _right(right), _box(nullptr), _cutDirection(cutDirection), _cutThreshold(cutThreshold) {
+
+        _box = left->box()->join(right->box());
+    }
+
+    Node(std::vector<Thing *> things) :
+            _left(nullptr), _right(nullptr), _box(nullptr) {
+
+        arma::vec minBounds({DBL_MAX, DBL_MAX, DBL_MAX});
+        arma::vec maxBounds({DBL_MIN, DBL_MIN, DBL_MIN});
+
+        for(Thing *t : things) {
+            arma::vec currentMin = t->minBounds();
+            arma::vec currentMax = t->maxBounds();
+
+            double xMin = std::min(minBounds.at(0), currentMin.at(0));
+            double xMax = std::max(maxBounds.at(0), currentMax.at(0));
+
+            double yMin = std::min(minBounds.at(1), currentMin.at(1));
+            double yMax = std::max(maxBounds.at(1), currentMax.at(1));
+
+            double zMin = std::min(minBounds.at(2), currentMin.at(2));
+            double zMax = std::max(maxBounds.at(2), currentMax.at(2));
+
+            minBounds = arma::vec({xMin, yMin, zMin});
+            maxBounds = arma::vec({xMax, yMax, zMax});
         }
-        if(right_)
-        {
-            delete right_;
-        }
-        if(boundBox_)
-        {
-            delete boundBox_;
-        }
+
+        _box = new AABB(minBounds, maxBounds, things);
     }
 
-    static Node* intBranch(Node* left, Node* right);
-
-    const bool hits(const Ray& point) const
-    {
-        return this->boundBox_->intercepts(point);
+    ~Node() {
+        if(_box)delete _box;
+        if(_left) delete _left;
+        if(_right) delete _right;
     }
 
-    Node* getLeft() const
-    {
-        return left_;
-    }
-    const arma::vec getMeanPoint() const
-    {
-        return this->boundBox_->getMean();
-    }
-    Node* getRight() const
-    {
-        return right_;
+    const bool isLeaf() const {
+        return _left == nullptr && _right == nullptr;
     }
 
-    Thing *getObject()
-    {
-        return this->boundBox_->getObject();
+    AABB *box() const {
+        return _box;
+    }
+
+    Node *left() const {
+        return _left;
+    }
+
+    Node *right() const {
+        return _right;
     }
 };
 

@@ -6,22 +6,25 @@
 #define KDTREE_KDTREE_H
 
 #include "Node.h"
+#include "../util/HitBox.h"
+#include "../world/Thing.h"
 
 class KDTree {
+
 private:
-    Node* root;
+    Node *root;
+    Node *build(std::vector<Thing *> things, int currentDirection);
+    const std::vector<Thing *> traverse(const Ray &ray, Node *root) const;
 public:
-    KDTree(){}
-    virtual ~KDTree(){
+    KDTree(const std::vector<Thing *> &things) {
+        root = build(things, 0);
+    }
+
+    ~KDTree() {
         delete root;
     }
-    void insert(const std::vector<Thing*>& objects);
 
-    const std::vector<Thing *> hits(const arma::vec& origin, const arma::vec& dir) const;
-
-    #ifdef _TESTE
-        void ValidInfo();
-    #endif
+    const std::vector<Thing *> traverse(const Ray &ray) const;
 };
 
 
